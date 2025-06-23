@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables */
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #2a2a2a;
+  --color-primary: #ae4887;
+  --color-secondary: #f24b4e;
+  --color-dark: #1a1a1a;
+  --color-gray: #94a3b8;
+  --color-gray-light: #e2e8f0;
+  --color-light: #f8e8f3;
+  --color-accent: #ffd166;
+  --color-success: #4ade80;
+  --color-warning: #facc15;
+  --color-error: #f43f5e;
+
+  /* Font Families */
+  --font-primary: "DM Sans", sans-serif;
+  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Extend Tailwind's color palette */
+  --color-brand-primary: var(--color-primary);
+  --color-brand-secondary: var(--color-secondary);
+  --color-brand-background: var(--color-background);
+  --color-brand-foreground: var(--color-foreground);
+  --color-brand-dark: var(--color-dark);
+  --color-brand-gray: var(--color-gray);
+  --color-brand-gray-light: var(--color-gray-light);
+  --color-brand-light: var(--color-light);
+  --color-brand-accent: var(--color-accent);
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply border-brand-gray-light;
+  }
+
+  body {
+    @apply bg-brand-background text-brand-foreground font-primary antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Button Components */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-brand-primary rounded-xl shadow-sm transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:ring-offset-2 disabled:opacity-50 disabled:hover:translate-y-0 disabled:cursor-not-allowed cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-brand-secondary rounded-xl shadow-sm transition-all duration-300 hover:bg-brand-secondary/90 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-secondary/20 focus:ring-offset-2 disabled:opacity-50 disabled:hover:translate-y-0 disabled:cursor-not-allowed cursor-pointer;
+  }
+
+  .btn-border {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-brand-primary bg-transparent border-2 border-brand-primary/20 rounded-xl transition-all duration-300 hover:border-brand-primary hover:bg-brand-primary/5 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:ring-offset-2 disabled:opacity-50 disabled:hover:translate-y-0 disabled:cursor-not-allowed cursor-pointer capitalize;
+  }
+
+  /* Input Components */
+  .input {
+    @apply block w-full px-4 py-3.5 text-sm text-brand-foreground bg-white/50 border-2 border-brand-gray-light/50 rounded-xl transition-all duration-200 placeholder:text-brand-gray focus:outline-none focus:border-brand-primary/30 focus:bg-white hover:border-brand-gray disabled:bg-gray-50 disabled:cursor-not-allowed;
+  }
+
+  /* Typography Components */
+  .text-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark font-heading leading-tight tracking-tight;
+  }
+
+  .text-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark font-heading leading-tight tracking-tight;
+  }
+
+  .text-sub {
+    @apply text-xl md:text-2xl font-medium text-brand-dark font-primary leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base text-brand-foreground font-primary leading-relaxed;
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border-2 border-brand-gray-light/30 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-lg text-3xl font-medium tracking-wide;
+  }
+
+  /* Navigation Components */
+  .nav-link {
+    @apply px-4 py-2 text-sm font-medium text-brand-dark rounded-xl transition-all duration-200 hover:text-brand-primary hover:bg-brand-light/50;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .font-primary {
+    font-family: var(--font-primary);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Team slider animation */
+  @keyframes team-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-team-slide {
+    animation: team-slide 60s linear infinite;
+  }
+  .group:hover .animate-team-slide {
+    animation-play-state: paused;
+  }
+
+  /* Float animation */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* Images Slider Infinite loop */
+.tag-list {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 5px 0;
+  position: relative;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+.loop-slider .inner {
+  display: flex;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: 30s;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
