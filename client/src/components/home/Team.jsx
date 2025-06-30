@@ -1,73 +1,10 @@
 import Image from "next/image";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { useState } from "react";
+import { teamCategories } from "@/src/data/team";
 
 export default function Team() {
   const [activeTab, setActiveTab] = useState("doctors");
-
-  const teamCategories = {
-    doctors: [
-      {
-        name: "Dr. Sarah Johnson",
-        role: "Clinical Director",
-        image: "/images/team/sarah.jpg",
-        bio: "15+ years experience in clinical psychology",
-        social: {
-          linkedin: "https://linkedin.com/",
-          twitter: "https://twitter.com/",
-          email: "mailto:sarah@swanthana.org",
-        },
-      },
-      {
-        name: "Dr. Michael Chen",
-        role: "Child Development Specialist",
-        image: "/images/team/michael.jpg",
-        bio: "Specialized in early childhood development",
-        social: {
-          linkedin: "https://linkedin.com/",
-          twitter: "https://twitter.com/",
-          email: "mailto:michael@swanthana.org",
-        },
-      },
-      {
-        name: "Dr. Priya Patel",
-        role: "Special Education Expert",
-        image: "/images/team/priya.jpg",
-        bio: "Expert in inclusive education methodologies",
-        social: {
-          linkedin: "https://linkedin.com/",
-          twitter: "https://twitter.com/",
-          email: "mailto:priya@swanthana.org",
-        },
-      },
-    ],
-    psychologists: [
-      {
-        name: "Dr. Emma Thompson",
-        role: "Senior Psychologist",
-        image: "/images/team/emma.jpg",
-        bio: "Specialized in cognitive behavioral therapy",
-        social: {
-          linkedin: "https://linkedin.com/",
-          email: "mailto:emma@swanthana.org",
-        },
-      },
-      // Add more psychologists
-    ],
-    nursing: [
-      {
-        name: "Sarah Williams",
-        role: "Head of Nursing",
-        image: "/images/team/sarah-w.jpg",
-        bio: "20+ years in rehabilitation nursing",
-        social: {
-          linkedin: "https://linkedin.com/",
-          email: "mailto:sarah.w@swanthana.org",
-        },
-      },
-      // Add more nursing staff
-    ],
-  };
 
   const tabs = [
     { id: "doctors", label: "Doctors" },

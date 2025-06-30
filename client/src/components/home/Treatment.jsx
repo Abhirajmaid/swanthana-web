@@ -140,12 +140,9 @@ export default function Treatment({ variant = "default" }) {
           <div className="flex items-center justify-between pt-4 border-t border-gray-100">
             <Link
               href={`/treatment/${treatment.slug}`}
-              className="text-brand-primary font-medium text-sm group-hover:text-brand-primary/70 transition-colors flex items-center gap-2"
+              className="btn-primary rounded-full px-6 py-2 font-semibold text-sm shadow hover:scale-105 transition-transform"
             >
               Learn More
-              <span className="w-4 h-4 rounded-full bg-brand-primary/10 flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                &rarr;
-              </span>
             </Link>
             <span className="text-xs text-brand-gray/60">View Treatment</span>
           </div>

@@ -1,45 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-
-// Dummy data (should match your main treatments data)
-const treatments = [
-  {
-    title: "Physiotherapy",
-    slug: "physiotherapy",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80",
-    description:
-      "Restore movement and function with evidence-based physiotherapy.",
-  },
-  {
-    title: "Speech Therapy",
-    slug: "speech-therapy",
-    image:
-      "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&q=80",
-    description:
-      "Improve communication and swallowing with personalized speech therapy.",
-  },
-  {
-    title: "Occupational Therapy",
-    slug: "occupational-therapy",
-    image:
-      "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80",
-    description:
-      "Regain independence in daily activities with occupational therapy.",
-  },
-  {
-    title: "Developmental Therapy",
-    slug: "developmental-therapy",
-    image:
-      "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?auto=format&fit=crop&q=80",
-    description:
-      "Support children's developmental needs with early intervention.",
-  },
-];
+import { treatments } from "@/src/data/treatments";
 
 export default function TreatmentsPage() {
   return (
-    <section className="py-16 bg-white min-h-screen">
+    <section className="py-[150px] bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-brand-dark mb-4">

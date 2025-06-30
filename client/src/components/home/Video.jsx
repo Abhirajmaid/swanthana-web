@@ -3,7 +3,7 @@ import { Play } from "lucide-react";
 export default function Video() {
   return (
     <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5" />
+      <div className="absolute inset-0 bg-brand-background" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">

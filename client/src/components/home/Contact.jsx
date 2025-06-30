@@ -73,15 +73,6 @@ export default function Contact() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10 rounded-[40px] transform rotate-6" />
             <div className="relative bg-white/80 backdrop-blur-xl rounded-[40px] border border-white/20 shadow-xl p-8">
-              <div className="absolute -right-12 -top-12">
-                <Image
-                  src="/images/contact-vector.svg"
-                  alt="Contact Decoration"
-                  width={120}
-                  height={120}
-                  className="animate-float"
-                />
-              </div>
               <form className="space-y-6">
                 <input type="text" placeholder="Your Name" className="input" />
                 <input
@@ -89,7 +80,10 @@ export default function Contact() {
                   placeholder="Your Email"
                   className="input"
                 />
-                <textarea placeholder="Your Message" className="input" />
+                <textarea
+                  placeholder="Your Message"
+                  className="input h-[200px]"
+                />
                 <button type="submit" className="btn-primary w-full">
                   Send Message
                 </button>

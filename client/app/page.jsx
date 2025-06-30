@@ -8,7 +8,10 @@ import Team from "@/src/components/home/Team";
 import Contact from "@/src/components/home/Contact";
 import Video from "@/src/components/home/Video";
 import Treatment from "@/src/components/home/Treatment";
+import Disorders from "@/src/components/home/Disorders";
 import InfiniteImageLoop from "@/src/components/home/InfiniteImageLoop";
+import MissionVisionFounders from "@/src/components/home/MissionVisionFounders";
+import Testimonials from "@/src/components/home/Testimonials";
 
 export default function Home() {
   return (
@@ -16,12 +19,15 @@ export default function Home() {
       <div className="space-y-0 relative">
         <Hero data={homeData.hero} />
         <About data={homeData.about} />
+        <MissionVisionFounders />
         <Treatment />
+        <Disorders />
         {/* <Services data={homeData.services} /> */}
         <div className="bg-gradient-to-b from-transparent via-brand-light/20 to-transparent">
           <Impact />
           <Video />
           <Team />
+          <Testimonials />
         </div>
         <Contact />
         <InfiniteImageLoop />

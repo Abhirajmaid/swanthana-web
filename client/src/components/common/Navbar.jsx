@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { navLinks } from "@/src/constants/navigation";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -21,8 +22,15 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center mr-3 shadow-md">
-              <span className="text-white font-bold text-sm">S</span>
+            <div className="w-10 h-10 mr-3 flex items-center justify-center">
+              <Image
+                src="/images/logo1.png"
+                alt="Swanthana Logo"
+                width={40}
+                height={40}
+                className="rounded-lg object-contain"
+                priority
+              />
             </div>
             <Link
               href="/"
@@ -31,9 +39,8 @@ export default function Navbar() {
               Swanthana
             </Link>
           </div>
-
           {/* Navigation Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="flex items-center space-x-6">
             {navLinks.map((link, idx) =>
               !link.subLinks ? (
                 <Link
@@ -48,12 +55,7 @@ export default function Navbar() {
                   {link.title}
                 </Link>
               ) : (
-                <div
-                  key={link.title}
-                  className="relative"
-                  onMouseEnter={() => setOpenDropdown(idx)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
+                <div key={link.title} className="relative">
                   <button
                     className={`nav-link flex items-center relative transition-all duration-200 ${
                       openDropdown === idx || isAnySubLinkActive(link.subLinks)
@@ -62,6 +64,10 @@ export default function Navbar() {
                     }`}
                     aria-haspopup="true"
                     aria-expanded={openDropdown === idx}
+                    onClick={() =>
+                      setOpenDropdown(openDropdown === idx ? null : idx)
+                    }
+                    type="button"
                   >
                     {link.title}
                     <ChevronDown
@@ -71,27 +77,32 @@ export default function Navbar() {
                     />
                   </button>
                   {openDropdown === idx && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-white/100 backdrop-blur-2xl rounded-2xl shadow-2xl border border-brand-gray-light/40 py-2 z-50 animate-fadeIn">
-                      {link.subLinks.map((subLink) => (
-                        <Link
-                          key={subLink.title}
-                          href={subLink.href}
-                          className={`block px-5 py-2 rounded-xl transition-all relative ${
-                            isLinkActive(subLink.href)
-                              ? "font-medium after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-brand-primary after:rounded-full bg-brand-primary/10 text-brand-primary"
-                              : "text-brand-gray hover:bg-brand-primary/5 hover:text-brand-primary"
-                          }`}
-                        >
-                          {subLink.title}
-                        </Link>
-                      ))}
+                    <div
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[900px] bg-white rounded-2xl shadow-none border-none z-50"
+                      style={{
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
+                        borderRadius: "1rem",
+                        padding: "32px 24px",
+                        border: "none",
+                      }}
+                    >
+                      <div className="grid grid-cols-4 gap-x-8 gap-y-6">
+                        {link.subLinks.map((subLink) => (
+                          <Link
+                            key={subLink.title}
+                            href={subLink.href}
+                            className="block text-brand-dark font-semibold text-base leading-tight hover:text-brand-primary transition-colors"
+                          >
+                            {subLink.title}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
               )
             )}
           </div>
-
           {/* CTA Button */}
           <button className="hidden md:block btn-primary rounded-2xl px-6 py-2 shadow-lg hover:scale-105 transition-transform">
             Donate Now

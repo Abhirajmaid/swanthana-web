@@ -14,7 +14,7 @@
 /** @type {NavLink[]} */
 export const navLinks = [
     { title: "Home", href: "/" },
-    { title: "About Us", href: "/about" },
+    { title: "About Us", href: "/about-us" },
     {
         title: "Treatments",
         href: "/treatment",
@@ -26,7 +26,6 @@ export const navLinks = [
             // Add more treatments as needed
         ],
     },
-    { title: "Gallery", href: "/gallery" },
     {
         title: "Disorders",
         href: "/disorders",
@@ -38,7 +37,8 @@ export const navLinks = [
             // Add more disorders as needed
         ],
     },
+    { title: "Gallery", href: "/gallery" },
+    { title: "Blogs", href: "/blogs" },
     { title: "Doctors", href: "/doctors" },
-    { title: "Events", href: "/events" },
     { title: "Contact Us", href: "/contact-us" },
 ];
