@@ -91,6 +91,7 @@ export default function Treatment({ variant = "default" }) {
             ? "scale-105 shadow-xl ring-1 ring-brand-primary/20 z-10"
             : "opacity-50"
         }
+        mx-2 sm:mx-0
       `}
       >
         {/* Card Header with Image */}
@@ -152,40 +153,40 @@ export default function Treatment({ variant = "default" }) {
   };
 
   return (
-    <section className="py-24 bg-white overflow-x-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+    <section className="py-10 sm:py-16 md:py-24 bg-white overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <div className="badge badge-primary inline-flex mb-4">
             Our Treatments
           </div>
-          <h2 className="text-4xl font-bold text-brand-dark mb-6">
+          <h2 className="text-2xl sm:text-4xl font-bold text-brand-dark mb-4 sm:mb-6">
             Specialized <span className="text-brand-primary">Treatment</span>{" "}
             Programs
           </h2>
-          <p className="text-lg text-brand-gray">
+          <p className="text-base sm:text-lg text-brand-gray">
             Comprehensive rehabilitation services tailored to individual needs
           </p>
         </div>
 
-        <div className="relative -mx-4 sm:mx-0">
+        <div className="relative -mx-2 sm:mx-0">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             centeredSlides={true}
             slidesPerView={1}
-            spaceBetween={24}
+            spaceBetween={16}
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             navigation
             breakpoints={{
-              640: { slidesPerView: 1.5 },
-              768: { slidesPerView: 1.8 },
+              640: { slidesPerView: 1.1 },
+              768: { slidesPerView: 1.5 },
               1024: { slidesPerView: 2 },
             }}
-            className="treatment-slider !overflow-visible px-4 sm:px-12"
+            className="treatment-slider !overflow-visible px-2 sm:px-12"
           >
             {treatments.map((treatment, index) => (
-              <SwiperSlide key={index} className="py-12">
+              <SwiperSlide key={index} className="py-8 sm:py-12">
                 {({ isActive }) => renderCard(treatment, isActive)}
               </SwiperSlide>
             ))}
@@ -194,7 +195,7 @@ export default function Treatment({ variant = "default" }) {
 
         <style jsx global>{`
           .treatment-slider {
-            padding: 1rem 0 4rem;
+            padding: 1rem 0 3rem;
           }
           .treatment-slider .swiper-slide {
             transition: all 0.3s ease;
@@ -207,14 +208,14 @@ export default function Treatment({ variant = "default" }) {
           .treatment-slider .swiper-button-prev {
             color: #ae4887;
             background: white;
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
           }
           .treatment-slider .swiper-button-next:after,
           .treatment-slider .swiper-button-prev:after {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
           }
           .treatment-slider .swiper-pagination-bullet-active {
             background: #ae4887;

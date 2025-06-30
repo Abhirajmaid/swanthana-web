@@ -62,39 +62,39 @@ function DisorderCard({ title, href, isActive }) {
 
 export default function Disorders() {
   return (
-    <section className="py-24 bg-white overflow-x-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+    <section className="py-10 sm:py-16 md:py-24 bg-white overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <div className="badge badge-primary inline-flex mb-4">
             Disorders We Address
           </div>
-          <h2 className="text-4xl font-bold text-brand-dark mb-6">
+          <h2 className="text-2xl sm:text-4xl font-bold text-brand-dark mb-4 sm:mb-6">
             <span className="text-brand-primary">Disorders</span> We Address
           </h2>
-          <p className="text-lg text-brand-gray">
+          <p className="text-base sm:text-lg text-brand-gray">
             Comprehensive support for a wide range of developmental and
             neurological disorders.
           </p>
         </div>
-        <div className="relative -mx-4 sm:mx-0">
+        <div className="relative -mx-2 sm:mx-0">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             centeredSlides={true}
             slidesPerView={1}
-            spaceBetween={24}
+            spaceBetween={16}
             loop={true}
             autoplay={{ delay: 3500, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             navigation
             breakpoints={{
-              640: { slidesPerView: 1.5 },
-              768: { slidesPerView: 1.8 },
+              640: { slidesPerView: 1.1 },
+              768: { slidesPerView: 1.5 },
               1024: { slidesPerView: 2 },
             }}
-            className="disorder-slider !overflow-visible px-4 sm:px-12"
+            className="disorder-slider !overflow-visible px-2 sm:px-12"
           >
             {disorders.map((disorder, index) => (
-              <SwiperSlide key={disorder.href} className="py-12">
+              <SwiperSlide key={disorder.href} className="py-8 sm:py-12">
                 {({ isActive }) => (
                   <DisorderCard
                     title={disorder.title}
@@ -108,7 +108,7 @@ export default function Disorders() {
         </div>
         <style jsx global>{`
           .disorder-slider {
-            padding: 1rem 0 4rem;
+            padding: 1rem 0 3rem;
           }
           .disorder-slider .swiper-slide {
             transition: all 0.3s ease;
@@ -121,14 +121,14 @@ export default function Disorders() {
           .disorder-slider .swiper-button-prev {
             color: #ae4887;
             background: white;
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
           }
           .disorder-slider .swiper-button-next:after,
           .disorder-slider .swiper-button-prev:after {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
           }
           .disorder-slider .swiper-pagination-bullet-active {
             background: #ae4887;

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { navLinks } from "@/src/constants/navigation";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -8,6 +8,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
   // Function to check if link is active
@@ -18,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 left-4 right-4 lg:top-8 lg:left-8 lg:right-8 bg-white/90 backdrop-blur-2xl border border-brand-gray-light/40 rounded-2xl shadow-xl shadow-brand-gray-light/10 z-50 transition-all">
-      <div className="max-w-8xl mx-auto px-6">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -39,8 +40,8 @@ export default function Navbar() {
               Swanthana
             </Link>
           </div>
-          {/* Navigation Menu */}
-          <div className="flex items-center space-x-6">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link, idx) =>
               !link.subLinks ? (
                 <Link
@@ -103,12 +104,85 @@ export default function Navbar() {
               )
             )}
           </div>
-          {/* CTA Button */}
+          {/* CTA Button Desktop */}
           <button className="hidden md:block btn-primary rounded-2xl px-6 py-2 shadow-lg hover:scale-105 transition-transform">
             Donate Now
           </button>
+          {/* Hamburger for Mobile */}
+          <button
+            className="md:hidden flex items-center justify-center p-2 rounded-lg hover:bg-brand-primary/10 transition"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label="Open menu"
+          >
+            {mobileOpen ? (
+              <X className="w-7 h-7" />
+            ) : (
+              <Menu className="w-7 h-7" />
+            )}
+          </button>
         </div>
       </div>
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white rounded-b-2xl shadow-xl border-t border-brand-gray-light/20 z-50 animate-fadeIn">
+          <div className="flex flex-col px-6 py-4 space-y-2">
+            {navLinks.map((link, idx) =>
+              !link.subLinks ? (
+                <Link
+                  key={link.title}
+                  href={link.href}
+                  className={`nav-link block py-2 ${
+                    isLinkActive(link.href)
+                      ? "font-semibold text-brand-primary"
+                      : "text-brand-dark"
+                  }`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.title}
+                </Link>
+              ) : (
+                <div key={link.title} className="relative">
+                  <button
+                    className={`nav-link flex items-center w-full py-2 ${
+                      openDropdown === idx || isAnySubLinkActive(link.subLinks)
+                        ? "font-semibold text-brand-primary"
+                        : "text-brand-dark"
+                    }`}
+                    onClick={() =>
+                      setOpenDropdown(openDropdown === idx ? null : idx)
+                    }
+                    type="button"
+                  >
+                    {link.title}
+                    <ChevronDown
+                      className={`ml-1 w-4 h-4 transition-transform ${
+                        openDropdown === idx ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {openDropdown === idx && (
+                    <div className="pl-4 py-2 space-y-1">
+                      {link.subLinks.map((subLink) => (
+                        <Link
+                          key={subLink.title}
+                          href={subLink.href}
+                          className={`block text-brand-dark font-medium text-base leading-tight hover:text-brand-primary transition-colors`}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {subLink.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            )}
+            <button className="btn-primary rounded-2xl px-6 py-2 shadow-lg mt-4">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      )}
       <style jsx global>{`
         .nav-link {
           font-size: 1rem;

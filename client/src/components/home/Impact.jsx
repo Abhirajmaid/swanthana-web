@@ -135,7 +135,7 @@ export default function Impact() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left: Illustration */}
           <div className="flex-1 flex justify-center">
-            <div className="relative w-full max-w-md h-[700px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white/80">
+            <div className="relative w-[350px] max-w-md md:h-[700px] h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white/80">
               <Image
                 src="/images/stocks/swanthana_1.jpg"
                 alt="Impact Illustration"
