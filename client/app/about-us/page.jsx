@@ -16,8 +16,8 @@ export default function AboutUsPage() {
             className="w-full h-full object-cover object-center"
             priority
             sizes="100vw"
-            width={1500}
-            height={1500}
+            width={2500}
+            height={2500}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/80 via-brand-dark/60 to-white" />
         </div>
@@ -174,142 +174,51 @@ export default function AboutUsPage() {
 
       {/* Facilities */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-12 items-start">
-          {/* Left: Summary */}
-          <div className="md:w-1/3 flex-shrink-0 mb-10 md:mb-0">
-            <div className="text-5xl font-extrabold text-brand-primary mb-2 leading-none">
-              15<span className="text-4xl align-top">+</span>
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row gap-12 items-center">
+          {/* Facility Image */}
+          <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <div className="relative w-full h-72 sm:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/stocks/8.jpg"
+                alt="Swanthana Facility"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent" />
             </div>
-            <div className="text-3xl font-bold text-brand-dark mb-4">
-              Centers
-            </div>
-            <p className="text-brand-gray mb-4">
-              Swanthana is one of the leading rehabilitation centers with more
-              than 15 centers in India. Our evidence-based therapies and
-              inclusive programs have helped hundreds of children and families
-              achieve their goals and regain independence.
-            </p>
-            <p className="text-brand-gray">
-              Our multidisciplinary team and modern facilities ensure the
-              highest standards of care, support, and community integration.
-            </p>
           </div>
-          {/* Right: Centers Cards */}
-          <div className="md:w-2/3 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Example Center 1 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80"
-                  alt="Mumbai Center"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-brand-primary text-xl">📍</span>
-                  <h3 className="text-lg font-bold text-brand-primary">
-                    Mumbai
-                  </h3>
-                </div>
-                <p className="text-sm text-brand-gray mb-4">
-                  Malad East, Mumbai, Ahead Fatima Devi School, Railway Station,
-                  Sushmita Building, Manchubhai Road, Near, Malad Subway, Malad
-                  East, Mumbai, Maharashtra 400097
-                </p>
-                <div className="flex items-center gap-2 mt-auto">
-                  <a
-                    href="tel:+911234567890"
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-yellow-400 text-brand-dark font-bold text-lg shadow hover:bg-yellow-500 transition"
-                    title="Call"
-                  >
-                    <span className="sr-only">Call</span>📞
-                  </a>
-                  <a
-                    href="#"
-                    className="ml-2 px-4 py-2 rounded-full bg-brand-primary text-white text-sm font-semibold shadow hover:bg-brand-primary/90 transition"
-                  >
-                    Know More &gt;
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Example Center 2 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
-                  alt="Ahmedabad Center"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-brand-primary text-xl">📍</span>
-                  <h3 className="text-lg font-bold text-brand-primary">
-                    Ahmedabad
-                  </h3>
-                </div>
-                <p className="text-sm text-brand-gray mb-4">
-                  B24, Greenwood, Garden City, Sardar Patel Ring Rd, Vibhag 1,
-                  OGNaj, Ahmedabad, Gujarat 380060
-                </p>
-                <div className="flex items-center gap-2 mt-auto">
-                  <a
-                    href="tel:+911234567890"
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-yellow-400 text-brand-dark font-bold text-lg shadow hover:bg-yellow-500 transition"
-                    title="Call"
-                  >
-                    <span className="sr-only">Call</span>📞
-                  </a>
-                  <a
-                    href="#"
-                    className="ml-2 px-4 py-2 rounded-full bg-brand-primary text-white text-sm font-semibold shadow hover:bg-brand-primary/90 transition"
-                  >
-                    Know More &gt;
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Example Center 3 */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1505245208761-ba872912fac0?auto=format&fit=crop&w=400&q=80"
-                  alt="Bangalore Center"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-brand-primary text-xl">📍</span>
-                  <h3 className="text-lg font-bold text-brand-primary">
-                    Bangalore
-                  </h3>
-                </div>
-                <p className="text-sm text-brand-gray mb-4">
-                  Sy no: 30/10, Yelahanka Hobli, Nagadasanahalli, Bengaluru,
-                  Karnataka 560064
-                </p>
-                <div className="flex items-center gap-2 mt-auto">
-                  <a
-                    href="tel:+911234567890"
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-yellow-400 text-brand-dark font-bold text-lg shadow hover:bg-yellow-500 transition"
-                    title="Call"
-                  >
-                    <span className="sr-only">Call</span>📞
-                  </a>
-                  <a
-                    href="#"
-                    className="ml-2 px-4 py-2 rounded-full bg-brand-primary text-white text-sm font-semibold shadow hover:bg-brand-primary/90 transition"
-                  >
-                    Know More &gt;
-                  </a>
-                </div>
-              </div>
+          {/* Facility Content */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center">
+            <h2 className="text-3xl font-bold text-brand-primary mb-4">
+              Our Facility
+            </h2>
+            <p className="text-brand-gray mb-4 text-lg">
+              Swanthana operates a dedicated, women-exclusive rehabilitation
+              center in Hyderabad, offering a safe, supportive, and healing
+              environment for women in need of psychiatric care, de-addiction,
+              and trauma recovery.
+            </p>
+            <ul className="space-y-3 text-brand-dark text-base mb-6 list-disc pl-5">
+              <li>Comfortable therapy and counseling rooms</li>
+              <li>24/7 medical observation and support</li>
+              <li>Group activity zones for skill-building and recreation</li>
+              <li>Secure, private, and homely atmosphere</li>
+              <li>Holistic care with a multidisciplinary team</li>
+            </ul>
+            <div className="flex gap-4">
+              <a
+                href="/contact-us"
+                className="btn-primary px-6 py-2 rounded-full font-semibold shadow hover:bg-brand-primary/90 transition"
+              >
+                Book a Visit
+              </a>
+              <a
+                href="/gallery"
+                className="btn-border px-6 py-2 rounded-full font-semibold shadow"
+              >
+                View Gallery
+              </a>
             </div>
           </div>
         </div>

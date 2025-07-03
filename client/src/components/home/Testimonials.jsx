@@ -3,58 +3,42 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const testimonials = [
+export const testimonials = [
   {
-    name: "Anannya Gavade",
-    avatar: "/avatars/avatar1.svg",
-    text: "I did not want to go to the rehab center after the accident being anxious, but Swanthana was helpful. It is all very organized and the staff are very friendly and did not rush me through the process of each treatment. It was great to have sessions with a qualified physical therapist.",
+    name: "Parent of a 38-year-old",
+    avatar: "/images/avatar.jpg",
+    text: "My daughter had schizophrenia for 8 years and struggled with hallucinations and daily life. After 3 months of treatment at Swanthana, she recovered and is now happily living with her family. We are deeply grateful to the Swanthana team.",
   },
   {
-    name: "Alok Paranjape",
-    avatar: "/avatars/avatar2.svg",
-    text: "At first, my brother refused to go to rehab, but the staff at Swanthana changed his mind and he liked their optimism and professionalism. They developed a unique treatment plan that would meet his demands and special needs. It was really gratifying to see his progress.",
+    name: "Daughter of a patient",
+    avatar: "/images/avatar.jpg",
+    text: "My mother was suffering from dementia and we had seen many doctors over 2 years. After 90 days at Swanthana, she recovered and is now actively participating in family life. Thank you Swanthana team!",
   },
   {
-    name: "Alok Paranjape",
-    avatar: "/avatars/avatar2.svg",
-    text: "At first, my brother refused to go to rehab, but the staff at Swanthana changed his mind and he liked their optimism and professionalism. They developed a unique treatment plan that would meet his demands and special needs. It was really gratifying to see his progress.",
+    name: "Father of a young woman",
+    avatar: "/images/avatar.jpg",
+    text: "I had joined my daughter in many rehab centers for drug and alcohol addiction, but she never recovered—until Swanthana. Now she’s living happily. I am thankful to Manjula ma’am and the team for their support.",
   },
   {
-    name: "Alok Paranjape",
-    avatar: "/avatars/avatar2.svg",
-    text: "At first, my brother refused to go to rehab, but the staff at Swanthana changed his mind and he liked their optimism and professionalism. They developed a unique treatment plan that would meet his demands and special needs. It was really gratifying to see his progress.",
+    name: "Sibling of a patient",
+    avatar: "/images/avatar.jpg",
+    text: "My sister had schizophrenia from the age of 15. When we came to Swanthana, we were impressed with the environment, classes, and care. Manjula was very warm and treated us like family. I highly recommend Swanthana.",
   },
   {
-    name: "Alok Paranjape",
-    avatar: "/avatars/avatar2.svg",
-    text: "At first, my brother refused to go to rehab, but the staff at Swanthana changed his mind and he liked their optimism and professionalism. They developed a unique treatment plan that would meet his demands and special needs. It was really gratifying to see his progress.",
+    name: "Caregiver",
+    avatar: "/images/avatar.jpg",
+    text: "My mother had schizophrenia. After one month at Swanthana, she returned to her baseline. The care and attention were exceptional. We are so thankful for the team's efforts.",
   },
   {
-    name: "Alok Paranjape",
-    avatar: "/avatars/avatar2.svg",
-    text: "At first, my brother refused to go to rehab, but the staff at Swanthana changed his mind and he liked their optimism and professionalism. They developed a unique treatment plan that would meet his demands and special needs. It was really gratifying to see his progress.",
+    name: "Son of a patient",
+    avatar: "/images/avatar.jpg",
+    text: "My mother had a fall and was in critical condition with a head wound and liver infection. After 3 months at Swanthana, she recovered fully. We appreciated the regular updates and professional treatment.",
   },
   {
-    name: "Alok Paranjape",
-    avatar: "/avatars/avatar2.svg",
-    text: "At first, my brother refused to go to rehab, but the staff at Swanthana changed his mind and he liked their optimism and professionalism. They developed a unique treatment plan that would meet his demands and special needs. It was really gratifying to see his progress.",
+    name: "Parent of a 22-year-old",
+    avatar: "/images/avatar.jpg",
+    text: "My daughter was addicted to alcohol and tobacco. A doctor recommended Swanthana, and she has since recovered, resumed her studies, and is now leading a normal life. Thank you Swanthana Rehab.",
   },
-  {
-    name: "Sandeep Koul",
-    avatar: "/avatars/avatar2.svg",
-    text: "My daughter was not able to handle the emotional part of her injury together with the physical part which she also had to endure. All the therapists I met at Swanthana were professional and knowledgeable but what made a real impression was how caring they were.",
-  },
-  {
-    name: "Sweta Deshmukh",
-    avatar: "/avatars/avatar3.svg",
-    text: "First of all the environment at Swanthana was very welcoming and friendly, I did not even feel awkward or uncomfortable when I first got there. The equipment is advanced and the staff are professional and well informed. I also liked the usage of different games and interesting tasks.",
-  },
-  {
-    name: "Kanchan Gadka",
-    avatar: "/avatars/avatar3.svg",
-    text: "Of all the places, Swanthana has been a place where people do care for your recovery and get well soon. The therapists are experienced and ask the patient and family for feedback at every stage.",
-  },
-  // Add more testimonials if needed for better carousel effect
 ];
 
 function TestimonialCard({ t }) {

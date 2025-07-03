@@ -19,22 +19,21 @@ export const navLinks = [
         title: "Treatments",
         href: "/treatment",
         subLinks: [
-            { title: "Physiotherapy", href: "/treatment/physiotherapy" },
-            { title: "Speech Therapy", href: "/treatment/speech-therapy" },
-            { title: "Occupational Therapy", href: "/treatment/occupational-therapy" },
-            { title: "Developmental Therapy", href: "/treatment/developmental-therapy" },
-            // Add more treatments as needed
+            { title: "De-Addiction Treatment", href: "/treatment/de-addiction-treatment" },
+            { title: "Psychiatric Care", href: "/treatment/psychiatric-care" },
+            { title: "Counseling & Therapy", href: "/treatment/counseling-therapy" },
+            { title: "Rehabilitation & Life Skills", href: "/treatment/rehabilitation-life-skills" },
         ],
     },
     {
         title: "Disorders",
         href: "/disorders",
         subLinks: [
-            { title: "Autism Spectrum Disorder", href: "/disorders/autism-spectrum" },
-            { title: "Cerebral Palsy", href: "/disorders/cerebral-palsy" },
-            { title: "Down Syndrome", href: "/disorders/down-syndrome" },
-            { title: "ADHD", href: "/disorders/adhd" },
-            // Add more disorders as needed
+            { title: "Schizophrenia", href: "/disorders/schizophrenia" },
+            { title: "Bipolar Disorder", href: "/disorders/bipolar" },
+            { title: "Dementia", href: "/disorders/dementia" },
+            { title: "Substance Use Disorder", href: "/disorders/addiction" },
+            { title: "Emotional & Trauma Recovery", href: "/disorders/trauma" },
         ],
     },
     { title: "Gallery", href: "/gallery" },

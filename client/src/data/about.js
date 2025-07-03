@@ -2,128 +2,125 @@ export const aboutData = {
     hero: {
         title: "About Swanthana",
         subtitle:
-            "Swanthana is dedicated to empowering children and families through compassionate care, rehabilitation, and inclusive education. Our mission is to nurture abilities, foster independence, and create a supportive community for every individual.",
+            "Swanthana is a women-focused de-addiction and rehabilitation center in Hyderabad. We provide compassionate care, psychiatric therapy, and support services to help women recover from mental health issues and substance abuse.",
         image:
-            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+            "/images/stocks/12.jpg", // Replace with an actual image of the center if available
     },
     story: {
         image:
-            "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=600&q=80",
+            "/images/stocks/16.jpg",
         title: "Our Story",
         points: [
             {
-                heading: "A Vision for Change:",
-                text: "Swanthana was founded to bridge the gap in child rehabilitation and inclusive care, inspired by the belief that every child deserves a chance to thrive.",
+                heading: "Founded with Purpose:",
+                text: "Swanthana was founded in May 2023 by Manjula Mummula and Dr. Mamatha Raghuveer Achanta to address the urgent need for women-centric mental health and de-addiction support in India.",
             },
             {
-                heading: "Early Days:",
-                text: "What began as a small initiative has grown into a leading center, thanks to the dedication of our founders, team, and the trust of countless families.",
+                heading: "Vision for Empowerment:",
+                text: "We aim to empower women suffering from psychiatric and addiction-related challenges by offering structured, compassionate, and professional care.",
             },
             {
-                heading: "Multidisciplinary Team:",
-                text: "Our doctors, therapists, educators, and support staff work together to provide holistic, evidence-based care tailored to each child’s unique needs.",
+                heading: "Focused on Recovery:",
+                text: "Our multidisciplinary approach includes medical treatment, psychological counseling, and reintegration support for every woman.",
             },
             {
-                heading: "Family & Community Focus:",
-                text: "We believe in empowering families and building inclusive communities through education, counseling, and outreach.",
+                heading: "Family & Social Healing:",
+                text: "We help rebuild relationships and improve quality of life through therapy, education, and community reintegration.",
             },
             {
-                heading: "Impact & Growth:",
-                text: "Over the years, Swanthana has empowered hundreds of children to achieve their fullest potential, expanded to multiple centers, and become a beacon of hope for many.",
+                heading: "Growing Impact:",
+                text: "Since launch, we’ve treated 50+ women suffering from disorders like schizophrenia, dementia, substance abuse, and bipolar disorder.",
             },
             {
-                heading: "Looking Ahead:",
-                text: "Our journey continues as we innovate, collaborate, and strive to make a difference in the lives of children and families across India.",
+                heading: "Moving Forward:",
+                text: "Swanthana is committed to expanding services, reaching more women, and creating a future where recovery and dignity are within reach for all.",
             },
         ],
     },
-    mission: "To provide compassionate, evidence-based rehabilitation and education that empowers every child and family to thrive.",
-    vision: "To be a center of excellence in holistic child development, recognized for innovation, inclusion, and impact.",
+    mission: "To rehabilitate and empower women with mental health and addiction issues through evidence-based therapy, counseling, and community support.",
+    vision: "To be a safe, trusted, and pioneering center of excellence for women's mental wellness and addiction recovery in India.",
     values: [
-        "Compassion & Empathy",
-        "Excellence in Care",
-        "Integrity & Trust",
-        "Collaboration",
-        "Family-Centered Approach",
-        "Inclusion & Respect",
+        "Compassionate Care",
+        "Dignity for All",
+        "Recovery-Focused",
+        "Community Support",
+        "Transparency & Integrity",
+        "Women-Centric Services",
     ],
     whatWeDo: [
         {
-            title: "Rehabilitation",
+            title: "De-Addiction",
             description:
-                "Comprehensive therapies including physiotherapy, speech therapy, occupational therapy, and developmental support for children with diverse needs.",
+                "Helping women overcome dependency on alcohol, drugs, tobacco, and other substances through detox, therapy, and long-term care.",
         },
         {
-            title: "Inclusive Education",
+            title: "Mental Health Support",
             description:
-                "Individualized education plans, special education, and inclusive classroom support to help every child learn and grow.",
+                "Treatment for schizophrenia, bipolar disorder, dementia, and emotional trauma with psychiatric and psychological intervention.",
         },
         {
-            title: "Family & Community",
+            title: "Rehabilitation & Reintegration",
             description:
-                "Family counseling, parent training, and community outreach to build awareness and foster inclusion.",
+                "Individual and group therapies, life skill development, and family counseling to help women return to a healthy, independent life.",
         },
     ],
     approach: {
-        subtitle: "How We Care for Every Child and Family",
-        heading: "A Personalized, Family-Centered Journey",
-        intro: "At Swanthana, every child’s journey is unique. Our approach is holistic, collaborative, and tailored to each individual’s needs, ensuring the best possible outcomes for children and their families.",
+        subtitle: "How We Help Women Heal and Thrive",
+        heading: "A Holistic, Woman-Centric Approach",
+        intro: "At Swanthana, we understand that every woman’s journey to recovery is unique. Our structured process ensures effective healing, dignity, and reintegration.",
         image:
-            "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+            "/images/stocks/2.jpg", // Replace with an actual image of the center if available
         steps: [
             {
-                title: "Comprehensive Assessment",
-                subtitle: "Understanding Every Child",
-                text: "We begin with a thorough evaluation by our multidisciplinary team to understand the child’s strengths, challenges, and family goals.",
+                title: "Medical & Psychiatric Assessment",
+                subtitle: "Understanding Her Needs",
+                text: "Initial evaluation by physicians and psychiatrists to diagnose and plan treatment.",
             },
             {
-                title: "Individualized Care Plan",
-                subtitle: "Personalized Roadmap",
-                text: "We design a customized intervention plan, setting clear goals and selecting therapies best suited for the child’s needs.",
+                title: "Personalized Care Plan",
+                subtitle: "Tailored Recovery Path",
+                text: "Customized plan combining medication, therapy, and support activities based on her condition and goals.",
             },
             {
-                title: "Integrated Therapies",
-                subtitle: "Collaborative Care",
-                text: "Our team delivers physiotherapy, speech, occupational, and developmental therapies in a coordinated, supportive environment.",
+                title: "Therapies & Counseling",
+                subtitle: "Healing in a Safe Space",
+                text: "Daily checkups, psychiatric visits, one-on-one counseling, and group therapies to promote healing.",
             },
             {
-                title: "Family & Community Involvement",
-                subtitle: "Empowering Support Systems",
-                text: "We engage parents and caregivers through training, counseling, and regular updates, and foster inclusion in schools and the community.",
+                title: "Family Involvement",
+                subtitle: "Rebuilding Support Systems",
+                text: "Regular family counseling sessions to rebuild trust and relationships with loved ones.",
             },
             {
-                title: "Continuous Monitoring & Growth",
-                subtitle: "Adapting for Progress",
-                text: "We regularly review progress, adapt plans, and celebrate every milestone—ensuring every child’s journey is supported at every step.",
+                title: "Aftercare & Follow-up",
+                subtitle: "Long-Term Stability",
+                text: "Post-treatment care and support to ensure a smooth return to everyday life and prevent relapse.",
             },
         ],
     },
     facilities: [
         {
-            image:
-                "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80",
-            title: "Modern Therapy Rooms",
+            image: "/images/stocks/18.jpg",
+            title: "Therapy Rooms",
             description:
-                "Spacious, well-equipped therapy rooms for physiotherapy, speech, and occupational therapy.",
+                "Comfortable, private spaces for psychiatric and psychological counseling sessions.",
         },
         {
-            image:
-                "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
-            title: "Sensory Integration Zone",
+            image: "/images/stocks/30.jpg",
+            title: "Group Activity Zones",
             description:
-                "Specially designed spaces for sensory play and integration, supporting children’s unique needs.",
+                "Safe spaces for life-skill development, group therapy, and wellness activities.",
         },
         {
-            image:
-                "https://images.unsplash.com/photo-1505245208761-ba872912fac0?auto=format&fit=crop&w=400&q=80",
-            title: "Inclusive Classrooms",
+            image: "/images/stocks/35.jpg",
+            title: "Medical Observation Rooms",
             description:
-                "Classrooms equipped for inclusive education, fostering learning and social interaction for all.",
+                "Rooms for detox, monitoring vitals, and initial stabilization under medical supervision.",
         },
     ],
     impact: [
-        { label: "Children Supported", value: "500+" },
-        { label: "Expert Staff", value: "30+" },
-        { label: "Years of Service", value: "15+" },
+        { label: "Women Treated", value: "55+" },
+        { label: "Conditions Treated", value: "7+" },
+        { label: "Months in Operation", value: "12+" },
     ],
 };

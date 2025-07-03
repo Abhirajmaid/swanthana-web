@@ -5,55 +5,153 @@ import { useState } from "react";
 // Example gallery images (replace with your own or fetch from API)
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/1.jpg",
     alt: "Therapy Session",
   },
   {
-    src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/2.jpg",
     alt: "Child Smiling",
   },
   {
-    src: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/3.jpg",
     alt: "Group Activity",
   },
   {
-    src: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/4.jpg",
     alt: "Rehab Center",
   },
   {
-    src: "https://images.unsplash.com/photo-1505245208761-ba872912fac0?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/5.jpg",
     alt: "Inclusive Classroom",
   },
   {
-    src: "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/6.jpg",
     alt: "Therapist with Child",
   },
   {
-    src: "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/7.jpg",
     alt: "Speech Therapy",
   },
   {
-    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/8.jpg",
     alt: "Physiotherapy",
   },
   {
-    src: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/11.jpg",
     alt: "Play Area",
   },
   {
-    src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/10.jpg",
     alt: "Founder",
   },
   {
-    src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/11.jpg",
     alt: "Founder",
   },
   {
-    src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80",
+    src: "/images/stocks/12.jpg",
     alt: "Founder",
   },
-
-  // ...add more images as needed
+  {
+    src: "/images/stocks/13.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/14.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/15.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/16.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/17.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/18.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/19.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/20.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/21.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/22.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/23.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/24.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/25.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/26.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/27.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/28.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/29.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/30.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/31.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/32.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/33.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/34.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/35.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/36.jpg",
+    alt: "Founder",
+  },
+  {
+    src: "/images/stocks/37.jpg",
+    alt: "Founder",
+  },
 ];
 
 export default function GalleryPage() {
@@ -65,7 +163,7 @@ export default function GalleryPage() {
       <section className="relative bg-white py-[120px] md:py-[180px] overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80"
+            src="/images/stocks/13.jpg"
             alt="Gallery Hero"
             className="w-full h-full object-cover object-center"
             priority
@@ -73,7 +171,7 @@ export default function GalleryPage() {
             width={1500}
             height={800}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/80 via-brand-dark/60 to-white/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/80 via-brand-dark/60 to-white" />
         </div>
         <div className="max-w-4xl mx-auto px-4 flex flex-col items-center justify-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg text-center">
@@ -89,30 +187,21 @@ export default function GalleryPage() {
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-brand-secondary/10 rounded-full blur-2xl -z-1" />
       </section>
       <section className="py-16 bg-white">
-        {/* Responsive grid, keep original image aspect ratio and size */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto px-2">
+        {/* Responsive grid, fixed box ratio like reference */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-6xl mx-auto px-2">
           {galleryImages.map((img, idx) => (
             <div
               key={idx}
-              className="relative w-full rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer flex items-center justify-center bg-[#f8fafc]"
+              className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer flex items-center justify-center bg-[#f8fafc]"
               onClick={() => setModal(idx)}
               tabIndex={0}
               aria-label="View image"
-              style={{ minHeight: "120px" }}
             >
               <Image
                 src={img.src}
                 alt={img.alt}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  display: "block",
-                  objectFit: "unset",
-                }}
-                className="transition-transform duration-300 hover:scale-105"
+                fill
+                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>

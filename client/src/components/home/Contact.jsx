@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function Contact() {
@@ -6,19 +6,20 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Us",
-      details: "123 Care Street, City, State 12345",
+      details:
+        "H.No. 17-1-391/T/261, Saraswathi Nagar, Saroornagar, Hyderabad - 500035, Telangana, India",
       color: "from-rose-500/20 to-pink-500/20 text-rose-500",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
+      details: "+91 98495 37798",
       color: "from-blue-500/20 to-indigo-500/20 text-blue-500",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      details: "contact@swanthana.org",
+      details: "swanthanarehab@gmail.com",
       color: "from-amber-500/20 to-orange-500/20 text-amber-500",
     },
   ];

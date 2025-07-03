@@ -1,102 +1,134 @@
 export const blogs = [
-    {
-        title: "Empowering Children with Special Needs: Swanthana’s Approach",
-        slug: "empowering-children-special-needs",
-        image: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=800&q=80",
-        date: "2024-05-01",
-        excerpt: "Discover how Swanthana’s holistic therapies and family-centered care are transforming lives and building brighter futures for children with special needs.",
-        author: "Dr. Anjali Rao",
-        article: `
-      <h2>Introduction</h2>
+  {
+    title: "The Road to Recovery: Inside Swanthana’s Rehabilitation Journey",
+    slug: "inside-swanthana-rehab-journey",
+    image: "/images/stocks/34.jpg",
+    date: "2024-06-01",
+    excerpt: "Discover how Swanthana transforms lives through holistic care, structured therapy, and deep compassion for women recovering from mental health challenges.",
+    author: "Team Swanthana",
+    article: `
       <p>
-        At Swanthana, we believe every child deserves the opportunity to thrive. Our approach combines evidence-based therapies, family involvement, and a nurturing environment to empower children with special needs.
+        Swanthana is more than just a rehabilitation center—it’s a sanctuary where women suffering from psychiatric conditions and addiction find the strength to heal and rebuild their lives. From the moment a woman walks through our doors, we prioritize dignity, safety, and personalized care.
       </p>
-      <h3>Our Philosophy</h3>
       <p>
-        We focus on holistic development, addressing physical, emotional, and social needs. Our multidisciplinary team collaborates to create personalized care plans for each child.
+        Every resident undergoes a comprehensive medical and psychological assessment. Based on this, our team creates a tailored treatment plan that includes psychiatric consultation, medication management, trauma-informed counseling, life skills training, and peer support sessions.
       </p>
-      <h3>Impact Stories</h3>
-      <ul>
-        <li>Children regaining mobility and independence</li>
-        <li>Families finding hope and support</li>
-        <li>Communities embracing inclusion</li>
-      </ul>
-      <h3>Conclusion</h3>
       <p>
-        Swanthana is more than a center—it's a community of care, compassion, and transformation.
+        Our residents follow a structured daily schedule that includes morning meditation, hygiene routines, healthy meals, therapeutic activities, and rest. What sets Swanthana apart is the compassion of our team—we listen, we counsel, and we celebrate every step forward.
       </p>
-    `,
-    },
-    {
-        title: "The Importance of Early Intervention in Child Development",
-        slug: "early-intervention-child-development",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-        date: "2024-04-18",
-        excerpt: "Learn why early intervention is crucial for children with developmental delays and how Swanthana supports families every step of the way.",
-        author: "Ravi Kumar",
-        article: `
-      <h2>Why Early Intervention Matters</h2>
       <p>
-        Early intervention can significantly improve outcomes for children with developmental delays. The earlier the support, the greater the progress.
+        Many women who came in lost, confused, or withdrawn are now smiling, contributing, and reconnecting with their families. Swanthana offers not just clinical support but a true chance to begin again—with hope and strength.
       </p>
-      <h3>Swanthana’s Early Intervention Program</h3>
-      <ul>
-        <li>Comprehensive assessments</li>
-        <li>Individualized therapy plans</li>
-        <li>Family education and involvement</li>
-      </ul>
-      <h3>Success Stories</h3>
+    `
+  },
+  {
+    title: "Why Women Hide Their Mental Illness: Stigma and Survival",
+    slug: "why-women-hide-mental-illness",
+    image: "/images/stocks/34.jpg",
+    date: "2024-06-06",
+    excerpt: "Explore why countless women in India hide their psychological struggles and how Swanthana creates a safe space for healing without shame.",
+    author: "Manjula Mummula",
+    article: `
       <p>
-        Many children at Swanthana have reached milestones once thought impossible, thanks to timely intervention and dedicated care.
+        In India, women suffering from mental illness often feel compelled to stay silent. Why? Because the stigma surrounding psychiatric disorders remains deeply entrenched in culture, family expectations, and gender roles. A woman with schizophrenia might be labeled “mad.” One with anxiety or depression might be told to “just get over it.”
       </p>
-    `,
-    },
-    {
-        title: "Speech Therapy Success Stories at Swanthana",
-        slug: "speech-therapy-success-stories",
-        image: "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=800&q=80",
-        date: "2024-03-28",
-        excerpt: "Real stories from families who have seen remarkable progress through our personalized speech therapy programs.",
-        author: "Team Swanthana",
-        article: `
-      <h2>Speech Therapy at Swanthana</h2>
       <p>
-        Our speech therapists work closely with children and families to overcome communication challenges.
+        At Swanthana, we’ve heard countless stories from women who suffered alone for years—fearful of abandonment, ashamed of being judged, or unaware that help was even possible. Society teaches women to prioritize others’ needs, leaving their emotional well-being unspoken and untreated.
       </p>
-      <h3>Real Progress</h3>
-      <ul>
-        <li>Children saying their first words</li>
-        <li>Improved confidence in social settings</li>
-        <li>Families celebrating every milestone</li>
-      </ul>
-      <h3>Our Approach</h3>
       <p>
-        We use play-based, individualized techniques to make therapy engaging and effective.
+        That’s why Swanthana was created: a private, non-judgmental space exclusively for women where their pain is acknowledged, their stories heard, and their recovery supported. We aim to normalize mental health conversations, promote emotional literacy, and educate families about real solutions.
       </p>
-    `,
-    },
-    {
-        title: "How to Support Inclusive Education in Your Community",
-        slug: "support-inclusive-education",
-        image: "https://images.unsplash.com/photo-1505245208761-ba872912fac0?auto=format&fit=crop&w=800&q=80",
-        date: "2024-03-10",
-        excerpt: "Tips and resources for parents, teachers, and advocates to foster inclusive classrooms and empower every child.",
-        author: "Swanthana Outreach",
-        article: `
-      <h2>Inclusive Education: Everyone Belongs</h2>
       <p>
-        Inclusive education ensures all children, regardless of ability, learn together in supportive environments.
+        Healing begins the moment a woman knows she’s not alone. By creating this safe haven, Swanthana helps women move from silence to strength.
       </p>
-      <h3>How You Can Help</h3>
-      <ul>
-        <li>Advocate for accessible classrooms</li>
-        <li>Promote awareness and understanding</li>
-        <li>Support teachers with resources and training</li>
-      </ul>
-      <h3>Resources</h3>
+    `
+  },
+  {
+    title: "Understanding Schizophrenia: A Family Perspective",
+    slug: "understanding-schizophrenia-family",
+    image: "/images/stocks/34.jpg",
+    date: "2024-06-12",
+    excerpt: "Schizophrenia affects not just individuals but their families. Learn how Swanthana guides both patient and caregivers through recovery.",
+    author: "Dr. Mamatha Raghuveer Achanta",
+    article: `
       <p>
-        Swanthana offers workshops and materials for schools and families to foster inclusion.
+        Schizophrenia is one of the most misunderstood psychiatric disorders. Hallucinations, delusions, and cognitive difficulties make life challenging not just for the patient—but also for their family. Many families feel helpless, isolated, and desperate for a solution.
       </p>
-    `,
-    },
+      <p>
+        At Swanthana, we work closely with families to educate them about schizophrenia and involve them in the recovery journey. Our approach includes family counseling, medication education, and tools to manage emotional triggers.
+      </p>
+      <p>
+        One mother whose daughter suffered from schizophrenia for 8 years found hope again at Swanthana. With consistent care, her daughter is now medication-stable and back home. Such stories are not rare—they’re possible when families are empowered alongside the patient.
+      </p>
+      <p>
+        Healing schizophrenia requires trust, time, and teamwork. With our holistic approach, Swanthana bridges the gap between patient and family—one day, one milestone at a time.
+      </p>
+    `
+  },
+  {
+    title: "From Addiction to Empowerment: A Woman’s Journey",
+    slug: "addiction-to-empowerment",
+    image: "/images/stocks/34.jpg",
+    date: "2024-06-18",
+    excerpt: "Addiction doesn’t define a woman. At Swanthana, it’s the starting point of a powerful transformation toward healing, dignity, and independence.",
+    author: "Team Swanthana",
+    article: `
+      <p>
+        Female addiction is often buried in silence. While society may discuss substance abuse among men openly, women who drink or use drugs are harshly judged, often labeled immoral or weak.
+      </p>
+      <p>
+        At Swanthana, we see the person beyond the addiction. Our de-addiction program supports women battling alcohol, tobacco, and drug dependency with medical detox, trauma therapy, group counseling, and structured routine building.
+      </p>
+      <p>
+        One 22-year-old woman admitted to Swanthana for alcohol dependence is now pursuing her education again, free from addiction and full of ambition. Such recovery is made possible by consistency, care, and community.
+      </p>
+      <p>
+        Empowerment begins with breaking the cycle of shame. At Swanthana, we offer women a safe place to start over—and succeed.
+      </p>
+    `
+  },
+  {
+    title: "Aftercare Matters: What Happens After Rehabilitation?",
+    slug: "why-aftercare-matters",
+    image: "/images/stocks/34.jpg",
+    date: "2024-06-25",
+    excerpt: "Rehab doesn’t end when a woman leaves the center. At Swanthana, aftercare is a vital part of sustaining long-term recovery and reintegration.",
+    author: "Swanthana Aftercare Team",
+    article: `
+      <p>
+        Many believe that the most difficult part of recovery is the detox or therapy phase. But the truth is, maintaining recovery after leaving rehab is equally—if not more—challenging.
+      </p>
+      <p>
+        That’s why Swanthana emphasizes a robust aftercare plan. Before a woman leaves our center, we work with her family to establish daily structure, medication compliance, therapy follow-up, and community support.
+      </p>
+      <p>
+        We also offer periodic check-ins, phone consultations, and reintegration counseling to ensure that progress made in rehab doesn’t slip away. Because relapse is a real risk—but so is long-term healing.
+      </p>
+      <p>
+        Aftercare is a bridge back to life, and at Swanthana, we make sure it’s strong, supportive, and sustainable.
+      </p>
+    `
+  },
+  {
+    title: "Volunteering at Swanthana: A First-Hand Account",
+    slug: "volunteering-at-swanthana",
+    image: "/images/stocks/34.jpg",
+    date: "2024-07-01",
+    excerpt: "A volunteer shares their experience inside Swanthana—witnessing hope, healing, and the strength of women rebuilding their lives.",
+    author: "Shreya (Volunteer)",
+    article: `
+      <p>
+        As a psychology student, I volunteered at Swanthana for 3 months. I expected clinical observation. What I got was a deeply emotional, life-changing experience.
+      </p>
+      <p>
+        I met women who had been abandoned by society, battling schizophrenia, depression, addiction, and trauma. Yet within weeks of care, I saw them laugh, learn, and support each other.
+      </p>
+      <p>
+        My tasks included assisting therapists, organizing recreational sessions, and simply listening. I learned that presence—just being there with empathy—can sometimes be the most healing thing.
+      </p>
+      <p>
+        Swanthana is not just a rehab—it’s a place where women rediscover their worth. Volunteering here gave me purpose, and I hope more people join hands with this incredible mission.
+      </p>
+    `
+  }
 ];

@@ -1,102 +1,136 @@
 export const disorderDetails = {
-    "autism-spectrum": {
-        title: "Autism Spectrum Disorder",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80",
-        description: "Comprehensive support and therapies for children and adults with Autism Spectrum Disorder.",
-        highlights: [
-            "Early Intervention",
-            "Behavioral Therapy",
-            "Social Skills Training",
-            "Speech & Language Therapy",
-            "Family Counseling"
-        ],
-        longDescription: `
-      <p>Our <b>Autism Spectrum Disorder</b> program provides individualized support for children and adults. We focus on early intervention, communication, and social skills development, using evidence-based therapies tailored to each person's needs.</p>
+  schizophrenia: {
+    title: "Schizophrenia",
+    image: "https://images.unsplash.com/photo-1622253692010-333d861345c6?auto=format&fit=crop&q=80",
+    description:
+      "Comprehensive care and rehabilitation for women suffering from schizophrenia and related psychotic disorders.",
+    highlights: [
+      "Psychiatric Evaluation",
+      "Medication Management",
+      "Behavioral Therapy",
+      "Daily Life Support",
+      "Family Counseling"
+    ],
+    longDescription: `
+      <p>At Swanthana, we provide structured and compassionate care for women experiencing <b>Schizophrenia</b>. Our approach includes regular psychiatric oversight, therapeutic counseling, and life skills training to support recovery and reduce relapses.</p>
       <ul>
-        <li>Personalized assessment and therapy plans</li>
-        <li>Multidisciplinary team approach</li>
-        <li>Family and caregiver involvement</li>
+        <li>Ongoing psychiatric supervision and medication support</li>
+        <li>Group and individual therapy to manage symptoms and triggers</li>
+        <li>Caregiver involvement and education for better home management</li>
       </ul>
-      <p>We are committed to helping individuals with autism reach their full potential in a supportive environment.</p>
+      <p>We help our patients regain their independence and reintegrate into family and society with dignity.</p>
     `,
-        meta: {
-            title: "Autism Spectrum Disorder | Swanthana",
-            description: "Support and therapies for Autism Spectrum Disorder at Swanthana."
-        }
-    },
-    "cerebral-palsy": {
-        title: "Cerebral Palsy",
-        image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&q=80",
-        description: "Holistic care and rehabilitation for children with Cerebral Palsy.",
-        highlights: [
-            "Physiotherapy",
-            "Occupational Therapy",
-            "Speech Therapy",
-            "Assistive Devices",
-            "Family Support"
-        ],
-        longDescription: `
-      <p>Our <b>Cerebral Palsy</b> program offers comprehensive rehabilitation and support for children and families. We use a multidisciplinary approach to improve mobility, communication, and independence.</p>
-      <ul>
-        <li>Customized therapy sessions</li>
-        <li>Access to assistive technology</li>
-        <li>Parental guidance and training</li>
-      </ul>
-      <p>Our goal is to enhance quality of life and promote inclusion for every child.</p>
-    `,
-        meta: {
-            title: "Cerebral Palsy | Swanthana",
-            description: "Rehabilitation and support for Cerebral Palsy at Swanthana."
-        }
-    },
-    "down-syndrome": {
-        title: "Down Syndrome",
-        image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80",
-        description: "Specialized programs for children with Down Syndrome.",
-        highlights: [
-            "Developmental Therapy",
-            "Speech & Language Therapy",
-            "Inclusive Education",
-            "Social Integration",
-            "Parental Counseling"
-        ],
-        longDescription: `
-      <p>Our <b>Down Syndrome</b> services focus on early intervention, education, and social integration. We provide therapies and support to help children develop essential life skills and confidence.</p>
-      <ul>
-        <li>Individual and group therapy</li>
-        <li>Inclusive classroom support</li>
-        <li>Family and community engagement</li>
-      </ul>
-      <p>We believe in empowering every child to thrive and participate fully in society.</p>
-    `,
-        meta: {
-            title: "Down Syndrome | Swanthana",
-            description: "Support and therapies for Down Syndrome at Swanthana."
-        }
-    },
-    "adhd": {
-        title: "ADHD",
-        image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&q=80",
-        description: "Comprehensive care for children with Attention Deficit Hyperactivity Disorder (ADHD).",
-        highlights: [
-            "Behavioral Therapy",
-            "Parent Training",
-            "Academic Support",
-            "Social Skills Training",
-            "Medication Management"
-        ],
-        longDescription: `
-      <p>Our <b>ADHD</b> program provides evidence-based interventions for children and families. We focus on behavior management, academic achievement, and social development.</p>
-      <ul>
-        <li>Individualized therapy plans</li>
-        <li>Collaboration with schools</li>
-        <li>Ongoing monitoring and support</li>
-      </ul>
-      <p>We help children with ADHD succeed at home, in school, and in the community.</p>
-    `,
-        meta: {
-            title: "ADHD | Swanthana",
-            description: "Support and therapies for ADHD at Swanthana."
-        }
+    meta: {
+      title: "Schizophrenia Care for Women | Swanthana",
+      description: "Treatment and support for schizophrenia at Swanthana Women's Rehabilitation Centre."
     }
+  },
+
+  bipolar: {
+    title: "Bipolar Disorder",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80",
+    description:
+      "Supportive psychiatric and therapeutic care for women with Bipolar Disorder.",
+    highlights: [
+      "Mood Stabilization",
+      "Medication Supervision",
+      "CBT & Psychotherapy",
+      "Crisis Intervention",
+      "Ongoing Counseling"
+    ],
+    longDescription: `
+      <p>Our <b>Bipolar Disorder</b> program at Swanthana focuses on stabilizing emotional highs and lows through evidence-based treatments and supportive therapy.</p>
+      <ul>
+        <li>Customized medication and mood management plans</li>
+        <li>Therapy sessions to address emotional regulation</li>
+        <li>Safe environment to heal during manic or depressive episodes</li>
+      </ul>
+      <p>We offer continued care to help each woman lead a balanced, productive, and fulfilling life.</p>
+    `,
+    meta: {
+      title: "Bipolar Disorder Treatment | Swanthana",
+      description: "Holistic recovery support for Bipolar Disorder at Swanthana."
+    }
+  },
+
+  dementia: {
+    title: "Dementia",
+    image: "https://images.unsplash.com/photo-1532634896-26909d0d7290?auto=format&fit=crop&q=80",
+    description:
+      "Personalized care and therapy for women living with dementia and memory-related disorders.",
+    highlights: [
+      "Cognitive Rehabilitation",
+      "Daily Routine Support",
+      "Safety & Supervision",
+      "Family Training",
+      "Therapeutic Activities"
+    ],
+    longDescription: `
+      <p>At Swanthana, we support women facing <b>Dementia</b> through structured routines, therapy, and 24/7 compassionate supervision. Our program reduces confusion, anxiety, and memory loss symptoms.</p>
+      <ul>
+        <li>Personalized care plans and cognitive exercises</li>
+        <li>Constant support with hygiene, meals, and movement</li>
+        <li>Family counseling for long-term planning</li>
+      </ul>
+      <p>We create a secure, calming environment that promotes dignity and comfort for every woman in our care.</p>
+    `,
+    meta: {
+      title: "Dementia Care for Women | Swanthana",
+      description: "Expert support for dementia and memory loss at Swanthana Rehabilitation Centre."
+    }
+  },
+
+  addiction: {
+    title: "Substance Use Disorder",
+    image: "https://images.unsplash.com/photo-1603570428736-e7772f2321a2?auto=format&fit=crop&q=80",
+    description:
+      "Detoxification, counseling, and long-term recovery support for women affected by alcohol and drug addiction.",
+    highlights: [
+      "Medical Detox",
+      "Withdrawal Management",
+      "Relapse Prevention",
+      "Addiction Counseling",
+      "Post-Recovery Support"
+    ],
+    longDescription: `
+      <p>Our <b>Substance Use Disorder</b> treatment program helps women safely overcome dependency on alcohol, drugs, and other substances through holistic recovery methods.</p>
+      <ul>
+        <li>Supervised detoxification and withdrawal stabilization</li>
+        <li>Regular counseling and support groups</li>
+        <li>Life skill development for post-rehab reintegration</li>
+      </ul>
+      <p>Our goal is to help every woman reclaim her life and sustain long-term sobriety with confidence and community support.</p>
+    `,
+    meta: {
+      title: "Women's Addiction Recovery | Swanthana",
+      description: "Effective and compassionate addiction treatment for women at Swanthana."
+    }
+  },
+
+  trauma: {
+    title: "Emotional & Trauma Recovery",
+    image: "https://images.unsplash.com/photo-1584515920744-79f4b10f1d9d?auto=format&fit=crop&q=80",
+    description:
+      "Therapy and support for women dealing with emotional trauma, abuse, and long-standing mental health challenges.",
+    highlights: [
+      "Trauma Counseling",
+      "Emotional Regulation",
+      "Group Therapy",
+      "Resilience Building",
+      "Self-Esteem Coaching"
+    ],
+    longDescription: `
+      <p>Our <b>Emotional & Trauma Recovery</b> program is designed to help women process, heal, and grow from experiences of emotional distress, abuse, or PTSD.</p>
+      <ul>
+        <li>Safe therapeutic environment for emotional expression</li>
+        <li>CBT, mindfulness, and resilience-based practices</li>
+        <li>Support networks to rebuild confidence and stability</li>
+      </ul>
+      <p>We walk alongside each woman’s healing journey with compassion and strength-based care.</p>
+    `,
+    meta: {
+      title: "Women's Trauma Recovery | Swanthana",
+      description: "Support and counseling for women recovering from trauma at Swanthana."
+    }
+  }
 };

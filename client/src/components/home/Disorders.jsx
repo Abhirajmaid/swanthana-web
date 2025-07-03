@@ -5,9 +5,13 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import { AlertTriangle, Brain, Smile, Activity } from "lucide-react";
+import { disorderDetails } from "@/src/data/disorders";
 
-const disorderNav = navLinks.find((link) => link.title === "Disorders");
-const disorders = disorderNav?.subLinks || [];
+// Build disorders array from disorderDetails keys
+const disorders = Object.entries(disorderDetails).map(([slug, data]) => ({
+  ...data,
+  href: `/disorders/${slug}`,
+}));
 
 // Icon mapping for demo (customize as needed)
 const disorderIcons = {

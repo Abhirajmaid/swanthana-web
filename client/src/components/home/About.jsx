@@ -1,24 +1,24 @@
-import { Award, Heart, Target, Users, Sparkles, HandHeart } from "lucide-react";
+import { HandHeart, Users, Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function About() {
   const stats = [
     {
       icon: <HandHeart className="w-6 h-6" />,
-      number: "25+",
-      label: "Years of Excellence",
+      number: "55+",
+      label: "Women Rehabilitated",
       color: "text-brand-primary",
     },
     {
       icon: <Users className="w-6 h-6" />,
-      number: "1000+",
-      label: "Lives Transformed",
+      number: "7+",
+      label: "Conditions Treated",
       color: "text-brand-secondary",
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
-      number: "100%",
-      label: "Patient Satisfaction",
+      number: "1 Year",
+      label: "of Service",
       color: "text-brand-primary",
     },
   ];
@@ -65,21 +65,23 @@ export default function About() {
                 About Us
               </div>
               <h2 className="text-2xl sm:text-4xl font-bold text-brand-dark mb-4 sm:mb-6">
-                Transforming Lives Through
+                Empowering Women through
                 <span className="text-brand-primary block mt-2">
-                  Rehabilitation Excellence
+                  Compassionate Rehabilitation
                 </span>
               </h2>
               <div className="space-y-3 sm:space-y-4 text-brand-gray">
                 <p>
-                  Founded in 1998, Swanthana Rehabilitation Center has been at
-                  the forefront of providing comprehensive rehabilitation
-                  services with a holistic approach to healthcare.
+                  Swanthana is a women-exclusive de-addiction and counseling
+                  center located in Hyderabad. Founded in May 2023 by Ms.
+                  Manjula Mummula and Dr. Mamatha Raghuveer Achanta, Swanthana
+                  was created to address the alarming gap in women-centered
+                  mental health services.
                 </p>
                 <p>
-                  Our state-of-the-art facility combines modern therapeutic
-                  techniques with compassionate care to ensure optimal recovery
-                  and enhanced quality of life for our patients.
+                  Our mission is to restore hope, dignity, and health for women
+                  facing challenges like addiction, schizophrenia, dementia, and
+                  trauma through evidence-based therapies and holistic support.
                 </p>
               </div>
             </div>
@@ -90,16 +92,17 @@ export default function About() {
                   Our Approach
                 </h3>
                 <p className="text-brand-gray text-sm sm:text-base">
-                  Patient-centered rehabilitation programs tailored to
-                  individual needs
+                  Personalized care plans, medical checkups, psychiatric
+                  treatment, and daily counseling
                 </p>
               </div>
               <div className="bg-white/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-brand-gray-light/20">
                 <h3 className="text-lg sm:text-xl font-semibold text-brand-dark mb-2 sm:mb-3">
-                  Our Promise
+                  Our Commitment
                 </h3>
                 <p className="text-brand-gray text-sm sm:text-base">
-                  Dedicated support throughout the rehabilitation journey
+                  Safe recovery, social reintegration, and long-term well-being
+                  for every woman
                 </p>
               </div>
             </div>

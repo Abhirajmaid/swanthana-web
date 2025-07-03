@@ -1,41 +1,42 @@
 import {
-  Heart,
   Users,
+  Heart,
   Award,
   Smile,
+  Globe,
   UserCheck,
   Activity,
   BookOpen,
-  Globe,
   Star,
 } from "lucide-react";
+
 import Image from "next/image";
 import { useState } from "react";
 
-const impactTabs = [
+export const impactTabs = [
   {
     label: "Overview",
     description:
-      "At Swanthana, our impact is measured not just in numbers, but in the lives we transform every day. Through our holistic programs, expert team, and community outreach, we empower children and families to achieve their fullest potential.",
+      "At Swanthana, our impact is defined by the transformation of lives—women recovering from addiction, trauma, and mental illness. Through structured care, compassion, and commitment, we help them reintegrate with strength and dignity.",
     stats: [
       {
         icon: <Users className="w-7 h-7" />,
-        number: "82000+",
-        label: "Lives Touched",
+        number: "55+",
+        label: "Women Rehabilitated",
         color: "bg-blue-100 text-blue-600",
         border: "border-blue-200",
       },
       {
         icon: <Heart className="w-7 h-7" />,
-        number: "15+",
-        label: "Specialized Programs",
+        number: "7+",
+        label: "Disorders Treated",
         color: "bg-pink-100 text-pink-600",
         border: "border-pink-200",
       },
       {
         icon: <Award className="w-7 h-7" />,
-        number: "25+",
-        label: "Years of Service",
+        number: "1+",
+        label: "Year of Service",
         color: "bg-yellow-100 text-yellow-600",
         border: "border-yellow-200",
       },
@@ -51,33 +52,33 @@ const impactTabs = [
   {
     label: "Our Reach",
     description:
-      "With a growing network of centers and outreach programs, Swanthana is making a difference across India. Our inclusive approach ensures that children from all backgrounds receive the care and support they deserve.",
+      "Swanthana began in Hyderabad, but our mission is expanding. Through local partnerships and word-of-mouth referrals, we are creating a safe space for women in need of mental health and addiction recovery services across Telangana.",
     stats: [
       {
         icon: <Globe className="w-7 h-7" />,
-        number: "15+",
-        label: "Centers Nationwide",
+        number: "1",
+        label: "Center in Hyderabad",
         color: "bg-indigo-100 text-indigo-600",
         border: "border-indigo-200",
       },
       {
         icon: <UserCheck className="w-7 h-7" />,
-        number: "120+",
-        label: "Expert Staff",
+        number: "10+",
+        label: "Medical & Support Staff",
         color: "bg-green-100 text-green-600",
         border: "border-green-200",
       },
       {
         icon: <Activity className="w-7 h-7" />,
-        number: "2000+",
-        label: "Therapy Sessions/Month",
+        number: "60+",
+        label: "Sessions/Month",
         color: "bg-orange-100 text-orange-600",
         border: "border-orange-200",
       },
       {
         icon: <BookOpen className="w-7 h-7" />,
-        number: "50+",
-        label: "Community Workshops",
+        number: "5+",
+        label: "Awareness Events",
         color: "bg-cyan-100 text-cyan-600",
         border: "border-cyan-200",
       },
@@ -86,33 +87,33 @@ const impactTabs = [
   {
     label: "Recognition",
     description:
-      "Our commitment to excellence has been recognized by leading organizations and the families we serve. We are proud to be a trusted partner in rehabilitation and inclusive care.",
+      "Though young, Swanthana is gaining recognition through real success stories, family testimonials, and collaborations with health professionals who trust our care model.",
     stats: [
       {
         icon: <Award className="w-7 h-7" />,
-        number: "10+",
-        label: "National Awards",
+        number: "5+",
+        label: "Public Mentions",
         color: "bg-yellow-100 text-yellow-600",
         border: "border-yellow-200",
       },
       {
         icon: <Star className="w-7 h-7" />,
         number: "4.9/5",
-        label: "Average Rating",
+        label: "Average Family Rating",
         color: "bg-purple-100 text-purple-600",
         border: "border-purple-200",
       },
       {
         icon: <Smile className="w-7 h-7" />,
         number: "98%",
-        label: "Positive Outcomes",
+        label: "Positive Recovery Rate",
         color: "bg-emerald-100 text-emerald-600",
         border: "border-emerald-200",
       },
       {
         icon: <Users className="w-7 h-7" />,
-        number: "500+",
-        label: "Community Partners",
+        number: "20+",
+        label: "Partner Referrals",
         color: "bg-blue-100 text-blue-600",
         border: "border-blue-200",
       },
@@ -135,7 +136,7 @@ export default function Impact() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left: Illustration */}
           <div className="flex-1 flex justify-center">
-            <div className="relative w-[350px] max-w-md md:h-[700px] h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white/80">
+            <div className="relative w-[350px] md:w-full max-w-md md:h-[700px] h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white/80">
               <Image
                 src="/images/stocks/swanthana_1.jpg"
                 alt="Impact Illustration"

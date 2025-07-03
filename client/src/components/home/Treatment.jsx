@@ -6,80 +6,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Activity, Brain, MessageSquare, Users } from "lucide-react";
+import { treatments } from "@/src/data/treatments";
 
 export default function Treatment({ variant = "default" }) {
   const icons = {
-    Physiotherapy: Activity,
-    "Speech Therapy": MessageSquare,
-    "Occupational Therapy": Brain,
-    "Developmental Therapy": Users,
+    "De-Addiction Treatment": Activity,
+    "Psychiatric Care": Brain,
+    "Counseling & Therapy": MessageSquare,
+    "Rehabilitation & Life Skills": Users,
   };
 
-  const treatments = [
-    {
-      title: "Physiotherapy",
-      slug: "physiotherapy",
-      description:
-        "Specialized physical rehabilitation and therapy. Our physiotherapy program is designed to restore movement and function when someone is affected by injury, illness, or disability. We use evidence-based techniques to help patients regain strength, flexibility, and independence.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80",
-      features: [
-        "Musculoskeletal Rehabilitation",
-        "Sports Injury",
-        "Post-Surgery Care",
-        "Pain Management",
-        "Mobility Enhancement",
-      ],
-    },
-    {
-      title: "Speech Therapy",
-      slug: "speech-therapy",
-      description:
-        "Communication and swallowing disorders treatment. Our speech therapy services help individuals improve their verbal and non-verbal communication skills, as well as address swallowing difficulties. We tailor our approach to each individual's unique needs.",
-      image:
-        "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&q=80",
-      features: [
-        "Language Development",
-        "Fluency Therapy",
-        "Voice Disorders",
-        "Articulation Therapy",
-        "Swallowing Therapy",
-      ],
-    },
-    {
-      title: "Occupational Therapy",
-      slug: "occupational-therapy",
-      description:
-        "Helping regain independence in daily activities. Our occupational therapy program focuses on enabling people to participate in the activities of everyday life. We assist with life skills, sensory integration, and cognitive rehabilitation.",
-      image:
-        "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=80",
-      features: [
-        "Life Skills Training",
-        "Sensory Integration",
-        "Cognitive Rehabilitation",
-        "Hand Therapy",
-        "Adaptive Equipment Training",
-      ],
-    },
-    {
-      title: "Developmental Therapy",
-      slug: "developmental-therapy",
-      description:
-        "Supporting children's developmental needs. Our developmental therapy program provides early intervention and support for children with developmental delays, focusing on motor skills, cognitive development, and social-emotional growth.",
-      image:
-        "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?auto=format&fit=crop&q=80",
-      features: [
-        "Early Intervention",
-        "Motor Skills",
-        "Cognitive Development",
-        "Social Skills Training",
-        "Behavioral Support",
-      ],
-    },
-  ];
-
   const renderCard = (treatment, isActive) => {
-    const Icon = icons[treatment.title];
+    const Icon = icons[treatment.title] || Activity;
 
     return (
       <div
@@ -117,7 +55,7 @@ export default function Treatment({ variant = "default" }) {
               {treatment.title}
             </h3>
             <span className="text-xs font-medium text-brand-primary bg-brand-primary/10 px-3 py-1 rounded-full">
-              {treatment.features[0]}
+              {treatment.highlights?.[0] || treatment.features?.[0]}
             </span>
           </div>
 
@@ -127,14 +65,16 @@ export default function Treatment({ variant = "default" }) {
 
           {/* Features as badges */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {treatment.features.map((feature, idx) => (
-              <span
-                key={idx}
-                className="inline-block bg-brand-primary/10 text-brand-primary text-xs px-3 py-1 rounded-full"
-              >
-                {feature}
-              </span>
-            ))}
+            {(treatment.highlights || treatment.features || []).map(
+              (feature, idx) => (
+                <span
+                  key={idx}
+                  className="inline-block bg-brand-primary/10 text-brand-primary text-xs px-3 py-1 rounded-full"
+                >
+                  {feature}
+                </span>
+              )
+            )}
           </div>
 
           {/* Action Footer */}
