@@ -1,5 +1,6 @@
-import { HandHeart, Users, Sparkles } from "lucide-react";
+import { HandHeart, Users, Sparkles, Info } from "lucide-react";
 import Image from "next/image";
+import SectionHeader from "@/src/components/common/SectionHeader";
 
 export default function About() {
   const stats = [
@@ -60,31 +61,13 @@ export default function About() {
 
           {/* Content Side */}
           <div className="space-y-6 sm:space-y-8 lg:mt-20">
-            <div>
-              <div className="badge badge-primary inline-flex mb-4">
-                About Us
-              </div>
-              <h2 className="text-2xl sm:text-4xl font-bold text-brand-dark mb-4 sm:mb-6">
-                Empowering Women through
-                <span className="text-brand-primary block mt-2">
-                  Compassionate Rehabilitation
-                </span>
-              </h2>
-              <div className="space-y-3 sm:space-y-4 text-brand-gray">
-                <p>
-                  Swanthana is a women-exclusive de-addiction and counseling
-                  center located in Hyderabad. Founded in May 2023 by Ms.
-                  Manjula Mummula and Dr. Mamatha Raghuveer Achanta, Swanthana
-                  was created to address the alarming gap in women-centered
-                  mental health services.
-                </p>
-                <p>
-                  Our mission is to restore hope, dignity, and health for women
-                  facing challenges like addiction, schizophrenia, dementia, and
-                  trauma through evidence-based therapies and holistic support.
-                </p>
-              </div>
-            </div>
+            <SectionHeader
+              badge={{ icon: <Info />, text: "About Us" }}
+              title="Empowering Women through"
+              gradientText="Compassionate Rehabilitation"
+              description="Swanthana is a women-exclusive de-addiction and counseling center located in Hyderabad. Founded in May 2023 by Ms. Manjula Mummula and Dr. Mamatha Raghuveer Achanta, Swanthana was created to address the alarming gap in women-centered mental health services."
+              alignment="left"
+            />
 
             <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
               <div className="bg-white/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-brand-gray-light/20">

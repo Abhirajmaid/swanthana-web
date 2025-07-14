@@ -36,8 +36,16 @@ export const navLinks = [
             { title: "Emotional & Trauma Recovery", href: "/disorders/trauma" },
         ],
     },
-    { title: "Gallery", href: "/gallery" },
-    { title: "Blogs", href: "/blogs" },
+    { title: "Success Stories", href: "/success-stories" },
+    {
+        title: "Media",
+        href: "/media",
+        subLinks: [
+            { title: "Blogs", href: "/blogs" },
+            { title: "Gallery", href: "/gallery" },
+            { title: "Annual Report", href: "/annual-report" },
+        ],
+    },
     { title: "Doctors", href: "/doctors" },
     { title: "Contact Us", href: "/contact-us" },
 ];

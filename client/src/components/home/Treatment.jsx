@@ -5,8 +5,15 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Activity, Brain, MessageSquare, Users } from "lucide-react";
+import {
+  Activity,
+  Brain,
+  MessageSquare,
+  Users,
+  Stethoscope,
+} from "lucide-react";
 import { treatments } from "@/src/data/treatments";
+import SectionHeader from "@/src/components/common/SectionHeader";
 
 export default function Treatment({ variant = "default" }) {
   const icons = {
@@ -95,18 +102,12 @@ export default function Treatment({ variant = "default" }) {
   return (
     <section className="py-10 sm:py-16 md:py-24 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-2 sm:px-4">
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
-          <div className="badge badge-primary inline-flex mb-4">
-            Our Treatments
-          </div>
-          <h2 className="text-2xl sm:text-4xl font-bold text-brand-dark mb-4 sm:mb-6">
-            Specialized <span className="text-brand-primary">Treatment</span>{" "}
-            Programs
-          </h2>
-          <p className="text-base sm:text-lg text-brand-gray">
-            Comprehensive rehabilitation services tailored to individual needs
-          </p>
-        </div>
+        <SectionHeader
+          badge={{ icon: <Stethoscope />, text: "Our Treatments" }}
+          title="Specialized"
+          gradientText="Treatment Programs"
+          description="Comprehensive rehabilitation services tailored to individual needs"
+        />
 
         <div className="relative -mx-2 sm:mx-0">
           <Swiper

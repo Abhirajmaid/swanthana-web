@@ -8,10 +8,12 @@ import {
   Activity,
   BookOpen,
   Star,
+  TrendingUp,
 } from "lucide-react";
 
 import Image from "next/image";
 import { useState } from "react";
+import SectionHeader from "@/src/components/common/SectionHeader";
 
 export const impactTabs = [
   {
@@ -148,20 +150,13 @@ export default function Impact() {
           </div>
           {/* Right: Stats & Tabs */}
           <div className="flex-1">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-1 rounded-full bg-brand-primary/10 text-brand-primary font-semibold text-sm tracking-wide mb-2">
-                Our Impact
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4 leading-tight">
-                Transforming <span className="text-brand-primary">Lives</span>{" "}
-                with Compassion &amp; Care
-              </h2>
-              <p className="text-brand-gray text-base md:text-lg mb-6 max-w-xl">
-                Swanthana is more than a center—it's a movement for hope,
-                inclusion, and lifelong growth. Discover how our programs,
-                people, and partnerships are making a difference.
-              </p>
-            </div>
+            <SectionHeader
+              badge={{ icon: <TrendingUp />, text: "Our Impact" }}
+              title="Transforming"
+              gradientText="Lives"
+              description="Swanthana is more than a center—it's a movement for hope, inclusion, and lifelong growth. Discover how our programs, people, and partnerships are making a difference."
+              alignment="left"
+            />
             {/* Tabs */}
             <div className="mb-8 flex flex-wrap gap-3">
               {impactTabs.map((tab, idx) => (

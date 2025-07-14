@@ -1,13 +1,47 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { blogs } from "@/src/data/blogs";
+import { getBlogBySlug } from "@/src/lib/blogService";
 
 export default function BlogDetailPage({ params }) {
   const { slug } = params;
-  const blog = blogs.find((b) => b.slug === slug);
+  const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [notFoundError, setNotFoundError] = useState(false);
 
-  if (!blog) {
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        const blogData = await getBlogBySlug(slug);
+        setBlog(blogData);
+      } catch (error) {
+        console.error("Error fetching blog:", error);
+        setNotFoundError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (slug) {
+      fetchBlog();
+    }
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <main className="bg-white min-h-screen">
+        <div className="flex items-center justify-center py-20">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Loading blog...</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  if (notFoundError || !blog) {
     notFound();
   }
 
@@ -71,7 +105,7 @@ export default function BlogDetailPage({ params }) {
         <div className="max-w-3xl mx-auto px-4">
           <article className="prose max-w-none text-brand-dark prose-headings:text-brand-primary prose-a:text-brand-primary prose-a:underline hover:prose-a:text-brand-dark">
             {/* Featured Image */}
-            <div className="w-full rounded-2xl overflow-hidden shadow mb-8">
+            <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow mb-8">
               <Image
                 src={blog.image}
                 alt={blog.title}

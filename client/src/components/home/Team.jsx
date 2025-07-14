@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Twitter, Mail, Users2 } from "lucide-react";
 import { useState } from "react";
 import { teamCategories } from "@/src/data/team";
+import SectionHeader from "@/src/components/common/SectionHeader";
 
 export default function Team() {
   const [activeTab, setActiveTab] = useState("doctors");
@@ -15,16 +16,12 @@ export default function Team() {
   return (
     <section className="py-24 bg-gray-50/50">
       <div className="relative max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="badge badge-primary inline-flex mb-4">Our Team</div>
-          <h2 className="text-4xl font-bold text-brand-dark mb-6">
-            Meet Our <span className="text-brand-primary">Experts</span>
-          </h2>
-          <p className="text-lg text-brand-gray">
-            Our dedicated team of professionals is committed to providing
-            exceptional care and support
-          </p>
-        </div>
+        <SectionHeader
+          badge={{ icon: <Users2 />, text: "Our Team" }}
+          title="Meet Our"
+          gradientText="Experts"
+          description="Our dedicated team of professionals is committed to providing exceptional care and support"
+        />
 
         {/* Tabs */}
         <div className="flex justify-center mb-12">

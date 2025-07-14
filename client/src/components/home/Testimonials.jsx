@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { MessageCircle } from "lucide-react";
+import SectionHeader from "@/src/components/common/SectionHeader";
 
 export const testimonials = [
   {
@@ -72,12 +74,12 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-brand-primary text-center mb-2">
-          82000+ <span className="text-brand-dark">Lives Touched</span>
-        </h2>
-        <p className="text-lg text-brand-gray text-center mb-12">
-          Hear from our patients and their families
-        </p>
+        <SectionHeader
+          badge={{ icon: <MessageCircle />, text: "Testimonials" }}
+          title="82000+"
+          gradientText="Lives Touched"
+          description="Hear from our patients and their families"
+        />
         <div className="space-y-10">
           {/* First row - infinite smooth scroll left to right */}
           <div className="overflow-hidden">

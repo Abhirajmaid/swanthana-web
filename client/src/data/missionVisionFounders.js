@@ -22,7 +22,7 @@ export const missionVisionFoundersData = {
         },
         {
             name: "Dr. Mamatha Raghuveer Achanta",
-            role: "Managing Trustee",
+            role: "Founder Trustee",
             image:
                 "/images/stocks/15.jpg",
             bio: "A reputed medical professional and advocate for women’s mental health. Dr. Mamatha co-founded Swanthana with a vision to offer holistic care and long-term healing to women in need.",

@@ -6,6 +6,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import { AlertTriangle, Brain, Smile, Activity } from "lucide-react";
 import { disorderDetails } from "@/src/data/disorders";
+import SectionHeader from "@/src/components/common/SectionHeader";
 
 // Build disorders array from disorderDetails keys
 const disorders = Object.entries(disorderDetails).map(([slug, data]) => ({
@@ -68,18 +69,12 @@ export default function Disorders() {
   return (
     <section className="py-10 sm:py-16 md:py-24 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-2 sm:px-4">
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
-          <div className="badge badge-primary inline-flex mb-4">
-            Disorders We Address
-          </div>
-          <h2 className="text-2xl sm:text-4xl font-bold text-brand-dark mb-4 sm:mb-6">
-            <span className="text-brand-primary">Disorders</span> We Address
-          </h2>
-          <p className="text-base sm:text-lg text-brand-gray">
-            Comprehensive support for a wide range of developmental and
-            neurological disorders.
-          </p>
-        </div>
+        <SectionHeader
+          badge={{ icon: <Brain />, text: "Disorders We Address" }}
+          title="Our"
+          gradientText="Specialized Care"
+          description="Comprehensive support for a wide range of developmental and neurological disorders"
+        />
         <div className="relative -mx-2 sm:mx-0">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
