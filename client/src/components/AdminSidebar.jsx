@@ -4,7 +4,15 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { logoutAdmin } from "@/src/lib/authService";
 import { useAuth } from "@/src/contexts/AuthContext";
-import { BookOpen, Plus, LayoutDashboard, LogOut, Menu, X } from "lucide-react";
+import {
+  BookOpen,
+  Plus,
+  LayoutDashboard,
+  LogOut,
+  Menu,
+  X,
+  Heart,
+} from "lucide-react";
 
 const AdminSidebar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,6 +35,11 @@ const AdminSidebar = () => {
       name: "Create Blog",
       href: "/admin/blogs/create",
       icon: Plus,
+    },
+    {
+      name: "Donations",
+      href: "/admin/donations",
+      icon: Heart,
     },
   ];
 

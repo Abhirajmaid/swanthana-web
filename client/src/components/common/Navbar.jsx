@@ -271,9 +271,12 @@ export default function Navbar() {
             )}
           </div>
           {/* CTA Button Desktop */}
-          <button className="hidden md:block btn-primary rounded-2xl px-6 py-2 shadow-lg hover:scale-105 transition-transform">
+          <Link
+            href="/donate"
+            className="hidden md:block btn-primary rounded-2xl px-6 py-2 shadow-lg hover:scale-105 transition-transform"
+          >
             Donate Now
-          </button>
+          </Link>
           {/* Hamburger for Mobile */}
           <button
             className="md:hidden flex items-center justify-center p-2 rounded-lg hover:bg-brand-primary/10 transition"

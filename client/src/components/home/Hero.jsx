@@ -32,9 +32,12 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div>
-              <button className="btn-border w-full sm:w-auto min-w-[160px] sm:min-w-[200px] text-white border-white/20 backdrop-blur-sm hover:border-white hover:-translate-y-1">
+              <a
+                href="/donate"
+                className="btn-border w-full sm:w-auto min-w-[160px] sm:min-w-[200px] text-white border-white/20 backdrop-blur-sm hover:border-white hover:-translate-y-1"
+              >
                 Donate Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
