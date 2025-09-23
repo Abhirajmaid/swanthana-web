@@ -26,6 +26,7 @@ export default function SuccessStoriesPage() {
         title="Success Stories"
         subtitle="Real stories of hope, healing, and transformation from women who found their path to recovery at Swanthana."
         image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1200&q=80"
+        showCtas={false}
       />
 
       {/* Filter Section */}

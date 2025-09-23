@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import { teamCategories } from "@/src/data/team";
 import { aboutData } from "@/src/data/about";
 import Contact from "@/src/components/home/Contact";
 import SectionHeader from "@/src/components/common/SectionHeader";
+import { useState, useEffect } from "react";
 import {
   BookOpen,
   Target,
@@ -24,6 +26,59 @@ import {
   Phone,
   Calendar,
 } from "lucide-react";
+
+// Carousel component for Our Approach images
+function ApproachCarousel() {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  const approachImages = [
+    "/images/updatedimg/Our_approach/Picture19.jpg",
+    "/images/updatedimg/Our_approach/Picture20.jpg",
+    "/images/updatedimg/Our_approach/Picture21.jpg",
+    "/images/updatedimg/Our_approach/Picture22.jpg",
+    "/images/updatedimg/Our_approach/Picture23.jpg",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % approachImages.length);
+    }, 2000); // 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative group">
+      <div className="relative w-[350px] h-[350px] lg:w-[450px] lg:h-[450px] rounded-3xl shadow-2xl overflow-hidden">
+        <Image
+          src={approachImages[currentImage]}
+          alt="Our Approach"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent" />
+        
+        {/* Image indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {approachImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImage(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentImage 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/50 hover:bg-white/75'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 rounded-2xl blur-xl"></div>
+      <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-brand-secondary/20 to-brand-primary/20 rounded-2xl blur-xl"></div>
+    </div>
+  );
+}
 
 export default function AboutUsPage() {
   return (
@@ -241,20 +296,7 @@ export default function AboutUsPage() {
             </div>
 
             <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative group">
-                <div className="relative w-[350px] h-[350px] lg:w-[450px] lg:h-[450px] rounded-3xl shadow-2xl overflow-hidden">
-                  <Image
-                    src={aboutData.approach.image}
-                    alt="Our Approach"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent" />
-                </div>
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 rounded-2xl blur-xl"></div>
-                <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-brand-secondary/20 to-brand-primary/20 rounded-2xl blur-xl"></div>
-              </div>
+              <ApproachCarousel />
             </div>
           </div>
         </div>
@@ -395,10 +437,11 @@ export default function AboutUsPage() {
             description="Our multidisciplinary team of doctors, therapists, and support staff dedicated to women's recovery and empowerment"
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Doctors */}
+          <div id="team-doctors" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamCategories.doctors.map((member, idx) => (
               <div
-                key={idx}
+                key={`doctor-${idx}`}
                 className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-brand-primary/20"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -427,6 +470,56 @@ export default function AboutUsPage() {
               </div>
             ))}
           </div>
+
+          {/* Psychologists */}
+          {teamCategories.psychologists?.length > 0 && (
+            <div className="mt-16">
+              <h3 className="text-2xl font-bold text-brand-dark mb-6">Psychologists</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {teamCategories.psychologists.map((member, idx) => (
+                  <div
+                    key={`psych-${idx}`}
+                    className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-brand-primary/20"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                    <div className="p-6 text-center">
+                      <h4 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{member.name}</h4>
+                      <p className="text-brand-primary font-semibold mb-3">{member.role}</p>
+                      <p className="text-sm text-brand-gray leading-relaxed">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Nursing */}
+          {teamCategories.nursing?.length > 0 && (
+            <div className="mt-16">
+              <h3 className="text-2xl font-bold text-brand-dark mb-6">Nursing</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {teamCategories.nursing.map((member, idx) => (
+                  <div
+                    key={`nurse-${idx}`}
+                    className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-brand-primary/20"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                    <div className="p-6 text-center">
+                      <h4 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{member.name}</h4>
+                      <p className="text-brand-primary font-semibold mb-3">{member.role}</p>
+                      <p className="text-sm text-brand-gray leading-relaxed">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

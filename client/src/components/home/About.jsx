@@ -32,7 +32,7 @@ export default function About() {
           <div className="relative">
             <div className="relative rounded-2xl sm:rounded-[2rem] overflow-hidden">
               <Image
-                src="/images/stocks/swanthana_1.jpg"
+                src="/images/updatedimg/secondpic.jpg"
                 alt="About Swanthana"
                 width={600}
                 height={700}

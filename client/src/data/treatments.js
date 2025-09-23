@@ -2,7 +2,7 @@ export const treatments = [
     {
         title: "De-Addiction Treatment",
         slug: "de-addiction-treatment",
-        image: "/images/stocks/22.jpg",
+        image: "/images/updatedimg/Deaddiction_treatment/Picture25.jpg",
         description:
             "Comprehensive de-addiction programs for women dealing with alcohol, drug, or substance dependence. Focused on safe withdrawal and long-term recovery.",
         highlights: [
@@ -31,7 +31,7 @@ export const treatments = [
     {
         title: "Psychiatric Care",
         slug: "psychiatric-care",
-        image: "/images/stocks/22.jpg",
+        image: "/images/updatedimg/psy_care/Picture26.jpg",
         description:
             "Expert psychiatric care for women suffering from schizophrenia, bipolar disorder, dementia, and other mental health issues.",
         highlights: [
@@ -60,7 +60,7 @@ export const treatments = [
     {
         title: "Counseling & Therapy",
         slug: "counseling-therapy",
-        image: "/images/stocks/22.jpg",
+        image: "/images/updatedimg/councelling_therepy/Picture4.jpg",
         description:
             "Individual and group counseling sessions to support emotional healing, trauma recovery, and overall mental well-being.",
         highlights: [
@@ -89,7 +89,7 @@ export const treatments = [
     {
         title: "Rehabilitation & Life Skills",
         slug: "rehabilitation-life-skills",
-        image: "/images/stocks/22.jpg",
+        image: "/images/updatedimg/rehabilitation_and_lifeskills/Picture29.jpg",
         description:
             "Empowering women with essential life skills, structured routines, and vocational guidance for a confident return to independent living.",
         highlights: [

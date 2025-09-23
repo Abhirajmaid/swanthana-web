@@ -140,7 +140,7 @@ export default function Impact() {
           <div className="flex-1 flex justify-center">
             <div className="relative w-[350px] md:w-full max-w-md md:h-[700px] h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white/80">
               <Image
-                src="/images/stocks/swanthana_1.jpg"
+                src="/images/updatedimg/councelling_and_therepy.jpg"
                 alt="Impact Illustration"
                 fill
                 className="object-cover h-full w-full"

@@ -1,7 +1,7 @@
 export const disorderDetails = {
   schizophrenia: {
     title: "Schizophrenia",
-    image: "https://images.unsplash.com/photo-1622253692010-333d861345c6?auto=format&fit=crop&q=80",
+    image: "/images/updatedimg/scizo/WhatsApp Image 2025-09-19 at 17.33.35_39d4aff1.jpg",
     description:
       "Comprehensive care and rehabilitation for women suffering from schizophrenia and related psychotic disorders.",
     highlights: [
@@ -28,7 +28,7 @@ export const disorderDetails = {
 
   bipolar: {
     title: "Bipolar Disorder",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80",
+    image: "/images/updatedimg/bipolar/IMG-20250919-WA0032.jpg",
     description:
       "Supportive psychiatric and therapeutic care for women with Bipolar Disorder.",
     highlights: [
@@ -55,7 +55,7 @@ export const disorderDetails = {
 
   dementia: {
     title: "Dementia",
-    image: "https://images.unsplash.com/photo-1532634896-26909d0d7290?auto=format&fit=crop&q=80",
+    image: "/images/updatedimg/dimentia/WhatsApp Image 2025-09-19 at 17.34.32_880bf784.jpg",
     description:
       "Personalized care and therapy for women living with dementia and memory-related disorders.",
     highlights: [
@@ -82,7 +82,7 @@ export const disorderDetails = {
 
   addiction: {
     title: "Substance Use Disorder",
-    image: "https://images.unsplash.com/photo-1603570428736-e7772f2321a2?auto=format&fit=crop&q=80",
+    image: "/images/updatedimg/substance_use/IMG-20250919-WA0039.jpg",
     description:
       "Detoxification, counseling, and long-term recovery support for women affected by alcohol and drug addiction.",
     highlights: [

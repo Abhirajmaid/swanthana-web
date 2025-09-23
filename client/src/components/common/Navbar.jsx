@@ -193,7 +193,7 @@ export default function Navbar() {
                       }`}
                     />
                   </button>
-                  {openDropdown === idx && (
+                  {openDropdown === idx && link.title !== "Treatment & Disorders" && (
                     <div
                       className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[800px] bg-white rounded-3xl shadow-2xl border border-gray-100/60 z-50 overflow-hidden"
                       style={{
@@ -261,6 +261,88 @@ export default function Navbar() {
                             <div className="w-2 h-2 bg-brand-primary/20 rounded-full"></div>
                             <div className="w-2 h-2 bg-brand-primary/40 rounded-full"></div>
                             <div className="w-2 h-2 bg-brand-primary rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {openDropdown === idx && link.title === "Treatment & Disorders" && (
+                    <div
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[900px] bg-white rounded-3xl shadow-2xl border border-gray-100/60 z-50 overflow-hidden"
+                      style={{
+                        boxShadow:
+                          "0 20px 50px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05)",
+                      }}
+                    >
+                      <div className="bg-gradient-to-r from-brand-primary/5 to-brand-secondary/5 px-8 py-6 border-b border-gray-100/60">
+                        <h3 className="text-lg font-bold text-brand-dark mb-1">
+                          Treatment & Disorders
+                        </h3>
+                        <p className="text-sm text-brand-gray">
+                          Explore our treatments and the conditions we specialize in
+                        </p>
+                      </div>
+                      <div className="p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          {/* Left: Treatments */}
+                          <div>
+                            <h4 className="text-base font-semibold text-brand-dark mb-4">
+                              Treatments
+                            </h4>
+                            <div className="space-y-1">
+                              {link.subLinks
+                                .filter((s) => s.href.startsWith("/treatment"))
+                                .map((subLink) => (
+                                  <Link
+                                    key={subLink.title}
+                                    href={subLink.href}
+                                    className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-brand-primary/5 hover:to-brand-secondary/5 transition-all duration-200 hover:shadow-sm"
+                                    onClick={() => setOpenDropdown(null)}
+                                  >
+                                    <div className="flex-shrink-0 w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center group-hover:bg-brand-primary/20 transition-colors">
+                                      {getIconForNavItem(subLink.title, subLink.href)}
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                      <h5 className="font-semibold text-brand-dark group-hover:text-brand-primary transition-colors mb-1">
+                                        {subLink.title}
+                                      </h5>
+                                      <p className="text-sm text-brand-gray leading-relaxed">
+                                        {getDescriptionForNavItem(subLink.title)}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                ))}
+                            </div>
+                          </div>
+                          {/* Right: Disorders */}
+                          <div>
+                            <h4 className="text-base font-semibold text-brand-dark mb-4">
+                              Disorders
+                            </h4>
+                            <div className="space-y-1">
+                              {link.subLinks
+                                .filter((s) => s.href.startsWith("/disorders"))
+                                .map((subLink) => (
+                                  <Link
+                                    key={subLink.title}
+                                    href={subLink.href}
+                                    className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-brand-primary/5 hover:to-brand-secondary/5 transition-all duration-200 hover:shadow-sm"
+                                    onClick={() => setOpenDropdown(null)}
+                                  >
+                                    <div className="flex-shrink-0 w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center group-hover:bg-brand-primary/20 transition-colors">
+                                      {getIconForNavItem(subLink.title, subLink.href)}
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                      <h5 className="font-semibold text-brand-dark group-hover:text-brand-primary transition-colors mb-1">
+                                        {subLink.title}
+                                      </h5>
+                                      <p className="text-sm text-brand-gray leading-relaxed">
+                                        {getDescriptionForNavItem(subLink.title)}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                ))}
+                            </div>
                           </div>
                         </div>
                       </div>
