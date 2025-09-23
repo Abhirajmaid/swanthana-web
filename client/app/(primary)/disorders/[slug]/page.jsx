@@ -37,7 +37,7 @@ export default function DisorderDetail({ params }) {
           </div>
           <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden mb-8 shadow-lg">
             <Image
-              src={disorder.image}
+              src={disorder.contentImage || disorder.image}
               alt={disorder.title}
               fill
               className="object-cover"

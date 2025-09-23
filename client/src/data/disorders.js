@@ -109,7 +109,8 @@ export const disorderDetails = {
 
   trauma: {
     title: "Emotional & Trauma Recovery",
-    image: "https://images.unsplash.com/photo-1584515920744-79f4b10f1d9d?auto=format&fit=crop&q=80",
+    image: "/images/updatedimg/emotional_trauma/IMG-20250919-WA0042.jpg",
+    contentImage: "/images/updatedimg/emotional_trauma/IMG-20250919-WA0044.jpg",
     description:
       "Therapy and support for women dealing with emotional trauma, abuse, and long-standing mental health challenges.",
     highlights: [

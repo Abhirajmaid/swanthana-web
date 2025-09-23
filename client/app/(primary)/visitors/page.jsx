@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionHeader from "@/src/components/common/SectionHeader";
+import HeroSection from "@/src/components/common/HeroSection";
 
 const visitors = [
   {
@@ -71,14 +72,13 @@ const visitors = [
 export default function VisitorsPage() {
   return (
     <main className="bg-white">
-      <section className="pt-[180px] pb-12 bg-brand-light/20">
-        <div className="max-w-6xl mx-auto px-4">
-          <SectionHeader
-            title="Our Visitors"
-            subtitle="Leaders from healthcare, corporates and the community who visited our centre"
-          />
-        </div>
-      </section>
+      {/* Hero-style header for stronger visual impact */}
+      <HeroSection
+        title="Our Visitors"
+        subtitle="Leaders from healthcare, corporates and the community who visited our centre"
+        image={visitors[0]?.image}
+        showCtas={false}
+      />
 
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-4 space-y-10">
