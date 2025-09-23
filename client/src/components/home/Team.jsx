@@ -1,17 +1,11 @@
 import Image from "next/image";
 import { Linkedin, Twitter, Mail, Users2 } from "lucide-react";
-import { useState } from "react";
 import { teamCategories } from "@/src/data/team";
 import SectionHeader from "@/src/components/common/SectionHeader";
 
 export default function Team() {
-  const [activeTab, setActiveTab] = useState("doctors");
-
-  const tabs = [
-    { id: "doctors", label: "Doctors" },
-    { id: "psychologists", label: "Psychologists" },
-    { id: "nursing", label: "Nursing Head" },
-  ];
+  // Use only the doctors array since we removed psychologists and nursing
+  const allTeamMembers = teamCategories.doctors;
 
   return (
     <section className="py-24 bg-gray-50/50">
@@ -23,29 +17,9 @@ export default function Team() {
           description="Our dedicated team of professionals is committed to providing exceptional care and support"
         />
 
-        {/* Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex rounded-xl bg-white p-2 shadow-sm">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300
-                  ${
-                    activeTab === tab.id
-                      ? "bg-brand-primary text-white shadow-md"
-                      : "text-brand-gray hover:text-brand-dark"
-                  }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Team Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {teamCategories[activeTab].map((member, index) => (
+          {allTeamMembers.map((member, index) => (
             <div
               key={index}
               className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500"

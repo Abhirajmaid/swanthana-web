@@ -117,6 +117,82 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
+      {/* Join as Volunteer - Final Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-brand-light/20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              {/* Visual */}
+              <div className="relative min-h-[260px] md:min-h-[420px]">
+                <Image
+                  src="/images/updatedimg/Visitors/Picture40.jpg"
+                  alt="Volunteers at Swanthana"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <div className="flex gap-4 text-sm">
+                    <div className="bg-white/10 backdrop-blur px-3 py-2 rounded-xl">
+                      <span className="font-semibold">Openings:</span> 18 roles
+                    </div>
+                    <div className="bg-white/10 backdrop-blur px-3 py-2 rounded-xl">
+                      <span className="font-semibold">Commitment:</span> 4–6 hrs/week
+                    </div>
+                    <div className="bg-white/10 backdrop-blur px-3 py-2 rounded-xl hidden sm:block">
+                      <span className="font-semibold">Last updated:</span> 03 Sep 2025
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 md:p-12">
+                <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                  <Heart className="w-4 h-4" /> Join Us as Volunteer
+                </div>
+                <h2 className="text-3xl font-bold text-brand-dark mb-3">Be a part of the healing journey</h2>
+                <p className="text-brand-gray leading-relaxed mb-6">
+                  Contribute your time and skills to support rehabilitation, therapy facilitation, and
+                  community outreach. Volunteers receive structured onboarding, role-specific training,
+                  and experience certificates.
+                </p>
+
+                {/* Meta data list */}
+                <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Program</div>
+                    <div className="font-semibold text-brand-dark">Swanthana Volunteer Fellowship 2025</div>
+                  </div>
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Location</div>
+                    <div className="font-semibold text-brand-dark">Saroornagar, Hyderabad (on-site)</div>
+                  </div>
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Roles</div>
+                    <div className="font-semibold text-brand-dark">Therapy Support, Admin, Events, Outreach</div>
+                  </div>
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Duration</div>
+                    <div className="font-semibold text-brand-dark">Minimum 8 weeks (flexible schedules)</div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="mailto:swanthanarehab@gmail.com?subject=Volunteer%20Application%20-%20Swanthana&body=Name%3A%0D%0APhone%3A%0D%0ARole%20Interest%3A%0D%0AAvailability%3A%0D%0A"
+                    className="bg-brand-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-primary/90 transition-colors flex items-center gap-2"
+                  >
+                    Apply to Volunteer
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                  <span className="text-sm text-brand-gray">Response within 3–5 working days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Methods Section */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">

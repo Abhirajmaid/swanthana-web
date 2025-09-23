@@ -6,9 +6,6 @@ import {
   Shield,
   Award,
   CheckCircle,
-  CreditCard,
-  Smartphone,
-  QrCode,
   Star,
   ArrowRight,
 } from "lucide-react";
@@ -18,24 +15,22 @@ import { processPayment, sendDonationReceipt } from "@/src/lib/donationService";
 export default function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState(500);
   const [customAmount, setCustomAmount] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("card");
   const [donorInfo, setDonorInfo] = useState({
     name: "",
     email: "",
     phone: "",
     address: "",
     panCard: "",
+    aadharCard: "",
     message: "",
   });
-  const [isAnonymous, setIsAnonymous] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const predefinedAmounts = [100, 250, 500, 1000, 2500, 5000];
 
   const impactData = [
     {
       amount: 500,
-      impact: "Supports one therapy session for a child",
+      impact: "Create livelihood for women",
       icon: <Heart className="w-6 h-6 text-brand-primary" />,
     },
     {
@@ -55,13 +50,9 @@ export default function DonatePage() {
     },
   ];
 
-  const handleAmountSelect = (amount) => {
-    setSelectedAmount(amount);
-    setCustomAmount("");
-  };
 
   const handleCustomAmountChange = (e) => {
-    const value = e.target.value;
+    const { value } = e.target;
     setCustomAmount(value);
     if (value) {
       setSelectedAmount(parseInt(value));
@@ -84,18 +75,16 @@ export default function DonatePage() {
       // Prepare donation data
       const donationData = {
         amount: selectedAmount,
-        paymentMethod,
-        donorInfo: isAnonymous ? { name: "Anonymous" } : donorInfo,
-        isAnonymous,
+        donorInfo,
         currency: "INR",
       };
 
       // Process payment through donation service
-      const result = await processPayment(donationData, paymentMethod);
+      const result = await processPayment(donationData);
 
       if (result.success) {
         // Send receipt email if donor provided email
-        if (!isAnonymous && donorInfo.email) {
+        if (donorInfo.email) {
           try {
             await sendDonationReceipt(result.donationId);
           } catch (emailError) {
@@ -111,16 +100,15 @@ export default function DonatePage() {
         // Reset form
         setSelectedAmount(500);
         setCustomAmount("");
-        setPaymentMethod("card");
         setDonorInfo({
           name: "",
           email: "",
           phone: "",
           address: "",
           panCard: "",
+          aadharCard: "",
           message: "",
         });
-        setIsAnonymous(false);
       } else {
         alert(result.message || "Payment failed. Please try again.");
       }
@@ -188,23 +176,6 @@ export default function DonatePage() {
                   Choose Your Donation Amount
                 </h3>
 
-                {/* Predefined Amounts */}
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-6">
-                  {predefinedAmounts.map((amount) => (
-                    <button
-                      key={amount}
-                      type="button"
-                      onClick={() => handleAmountSelect(amount)}
-                      className={`p-4 rounded-lg border-2 transition-all ${
-                        selectedAmount === amount && !customAmount
-                          ? "border-brand-primary bg-brand-primary text-white"
-                          : "border-brand-gray-light hover:border-brand-primary"
-                      }`}
-                    >
-                      <div className="text-lg font-semibold">₹{amount}</div>
-                    </button>
-                  ))}
-                </div>
 
                 {/* Custom Amount */}
                 <div className="relative">
@@ -231,69 +202,14 @@ export default function DonatePage() {
                 </div>
               </div>
 
-              {/* Payment Method */}
-              <div>
-                <h3 className="text-xl font-bold text-brand-dark mb-4">
-                  Payment Method
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod("card")}
-                    className={`p-4 rounded-lg border-2 transition-all ${
-                      paymentMethod === "card"
-                        ? "border-brand-primary bg-brand-primary/10"
-                        : "border-brand-gray-light hover:border-brand-primary"
-                    }`}
-                  >
-                    <CreditCard className="w-6 h-6 mx-auto mb-2" />
-                    <div className="font-medium">Credit/Debit Card</div>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod("upi")}
-                    className={`p-4 rounded-lg border-2 transition-all ${
-                      paymentMethod === "upi"
-                        ? "border-brand-primary bg-brand-primary/10"
-                        : "border-brand-gray-light hover:border-brand-primary"
-                    }`}
-                  >
-                    <Smartphone className="w-6 h-6 mx-auto mb-2" />
-                    <div className="font-medium">UPI</div>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod("netbanking")}
-                    className={`p-4 rounded-lg border-2 transition-all ${
-                      paymentMethod === "netbanking"
-                        ? "border-brand-primary bg-brand-primary/10"
-                        : "border-brand-gray-light hover:border-brand-primary"
-                    }`}
-                  >
-                    <QrCode className="w-6 h-6 mx-auto mb-2" />
-                    <div className="font-medium">Net Banking</div>
-                  </button>
-                </div>
-              </div>
 
               {/* Donor Information */}
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-brand-dark">
-                    Donor Information
-                  </h3>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={isAnonymous}
-                      onChange={(e) => setIsAnonymous(e.target.checked)}
-                      className="mr-2"
-                    />
-                    <span className="text-brand-gray">Donate anonymously</span>
-                  </label>
-                </div>
+                <h3 className="text-xl font-bold text-brand-dark mb-4">
+                  Donor Information
+                </h3>
 
-                {!isAnonymous && (
+                <div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
@@ -329,6 +245,15 @@ export default function DonatePage() {
                       onChange={handleDonorInfoChange}
                       className="p-3 border border-brand-gray-light rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
                     />
+                    <input
+                      type="text"
+                      name="aadharCard"
+                      placeholder="Aadhar Card *"
+                      value={donorInfo.aadharCard}
+                      onChange={handleDonorInfoChange}
+                      required
+                      className="p-3 border border-brand-gray-light rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+                    />
                     <textarea
                       name="address"
                       placeholder="Address"
@@ -346,7 +271,7 @@ export default function DonatePage() {
                       className="md:col-span-2 p-3 border border-brand-gray-light rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
                     />
                   </div>
-                )}
+                </div>
               </div>
 
               {/* Tax Benefits */}
@@ -367,7 +292,8 @@ export default function DonatePage() {
                 disabled={
                   isSubmitting ||
                   !selectedAmount ||
-                  (!isAnonymous && !donorInfo.name)
+                  !donorInfo.name ||
+                  !donorInfo.aadharCard
                 }
                 className="w-full bg-brand-primary text-white py-4 rounded-lg font-semibold text-lg transition-all hover:bg-brand-primary/90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
@@ -378,7 +304,7 @@ export default function DonatePage() {
                   </>
                 ) : (
                   <>
-                    Donate ₹{selectedAmount?.toLocaleString()} Now
+                    Pay Now
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </>
                 )}

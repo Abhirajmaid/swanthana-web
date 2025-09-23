@@ -5,75 +5,75 @@ import { useState } from "react";
 // Example gallery images (replace with your own or fetch from API)
 const galleryImages = [
   {
-    src: "/images/stocks/1.jpg",
+    src: "/images/updatedimg/Visitors/Picture40.jpg",
     alt: "Therapy Session",
   },
   {
-    src: "/images/stocks/2.jpg",
+    src: "/images/updatedimg/Visitors/Picture41.jpg",
     alt: "Child Smiling",
   },
   {
-    src: "/images/stocks/3.jpg",
+    src: "/images/updatedimg/Visitors/Picture42.jpg",
     alt: "Group Activity",
   },
   {
-    src: "/images/stocks/4.jpg",
+    src: "/images/updatedimg/Visitors/Picture43.jpg",
     alt: "Rehab Center",
   },
   {
-    src: "/images/stocks/5.jpg",
+    src: "/images/updatedimg/Visitors/Picture44.jpg",
     alt: "Inclusive Classroom",
   },
   {
-    src: "/images/stocks/6.jpg",
+    src: "/images/updatedimg/Visitors/Picture45.jpg",
     alt: "Therapist with Child",
   },
   {
-    src: "/images/stocks/7.jpg",
+    src: "/images/updatedimg/Visitors/Picture46.jpg",
     alt: "Speech Therapy",
   },
   {
-    src: "/images/stocks/8.jpg",
+    src: "/images/updatedimg/Visitors/Picture47.jpg",
     alt: "Physiotherapy",
   },
   {
-    src: "/images/stocks/11.jpg",
+    src: "/images/updatedimg/meet_our_expert/Picture15.jpg",
     alt: "Play Area",
   },
   {
-    src: "/images/stocks/10.jpg",
+    src: "/images/updatedimg/founder_img/Manjula.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/11.jpg",
+    src: "/images/updatedimg/founder_img/Mamatha.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/12.jpg",
+    src: "/images/updatedimg/meet_our_expert/Picture16.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/13.jpg",
+    src: "/images/updatedimg/meet_our_expert/Picture17.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/14.jpg",
+    src: "/images/updatedimg/bipolar/IMG-20250919-WA0032.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/15.jpg",
+    src: "/images/updatedimg/bipolar/IMG-20250919-WA0033.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/16.jpg",
+    src: "/images/updatedimg/bipolar/IMG-20250919-WA0034.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/17.jpg",
+    src: "/images/updatedimg/bipolar/IMG-20250919-WA0035.jpg",
     alt: "Founder",
   },
   {
-    src: "/images/stocks/18.jpg",
+    src: "/images/updatedimg/substance_use/IMG-20250919-WA0038.jpg",
     alt: "Founder",
   },
   {

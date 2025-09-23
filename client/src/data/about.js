@@ -4,11 +4,11 @@ export const aboutData = {
         subtitle:
             "Swanthana is a women-focused de-addiction and rehabilitation center in Hyderabad. We provide compassionate care, psychiatric therapy, and support services to help women recover from mental health issues and substance abuse.",
         image:
-            "/images/stocks/12.jpg", // Replace with an actual image of the center if available
+            "/images/updatedimg/about_page_image.jpg",
     },
     story: {
         image:
-            "/images/stocks/16.jpg",
+            "/images/updatedimg/ourstory.jpg",
         title: "Our Story",
         points: [
             {
@@ -69,7 +69,7 @@ export const aboutData = {
         heading: "A Holistic, Woman-Centric Approach",
         intro: "At Swanthana, we understand that every woman’s journey to recovery is unique. Our structured process ensures effective healing, dignity, and reintegration.",
         image:
-            "/images/stocks/2.jpg", // Replace with an actual image of the center if available
+            "/images/updatedimg/Our_approach/Picture19.jpg",
         steps: [
             {
                 title: "Medical & Psychiatric Assessment",
@@ -100,19 +100,19 @@ export const aboutData = {
     },
     facilities: [
         {
-            image: "/images/stocks/18.jpg",
+            image: "/images/updatedimg/councelling_therepy/Picture4.jpg",
             title: "Therapy Rooms",
             description:
                 "Comfortable, private spaces for psychiatric and psychological counseling sessions.",
         },
         {
-            image: "/images/stocks/30.jpg",
+            image: "/images/updatedimg/rehabilitation/Picture8.jpg",
             title: "Group Activity Zones",
             description:
                 "Safe spaces for life-skill development, group therapy, and wellness activities.",
         },
         {
-            image: "/images/stocks/35.jpg",
+            image: "/images/updatedimg/psy_care/Picture26.jpg",
             title: "Medical Observation Rooms",
             description:
                 "Rooms for detox, monitoring vitals, and initial stabilization under medical supervision.",

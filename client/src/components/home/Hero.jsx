@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center mt-16 sm:mt-20">
         {/* Background Image */}
         <Image
-          src="/images/swanthana_hero.png"
+          src="/images/updatedimg/about_page_image.jpg"
           alt="Hero Background"
           fill
           className="object-cover object-center rounded-2xl sm:rounded-3xl brightness-[0.85]"

@@ -22,7 +22,7 @@ export default function Video() {
         <div className="relative max-w-4xl mx-auto rounded-[40px] overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 group-hover:opacity-75 transition-opacity duration-300" />
           <img
-            src="/images/stocks/swanthana_1.jpg"
+            src="/images/updatedimg/about_page_image.jpg"
             alt="Video Thumbnail"
             className="w-full aspect-video object-cover"
           />
