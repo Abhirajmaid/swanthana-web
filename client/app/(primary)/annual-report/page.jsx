@@ -20,7 +20,7 @@ const annualReports = [
     fileSize: "2.4 MB",
     downloadUrl: "/documents/swanthana-annual-report-2023.pdf",
     highlights: [
-      "55+ Women Successfully Rehabilitated",
+      "164 Members Treated",
       "7 Different Conditions Treated",
       "100% Family Satisfaction Rate",
       "New Treatment Programs Launched",

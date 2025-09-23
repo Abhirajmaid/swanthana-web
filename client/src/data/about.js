@@ -119,8 +119,8 @@ export const aboutData = {
         },
     ],
     impact: [
-        { label: "Women Treated", value: "55+" },
-        { label: "Conditions Treated", value: "7+" },
-        { label: "Months in Operation", value: "12+" },
+        { label: "Years of Service", value: "3" },
+        { label: "Members Treated", value: "164" },
+        { label: "Addiction Cases", value: "97" },
     ],
 };

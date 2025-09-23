@@ -23,7 +23,7 @@ const annualReportsData = {
     id: 1,
     slug: "annual-report-2023",
     title: "Annual Report 2023",
-    subtitle: "Transforming Lives, Building Hope",
+    subtitle: "3 Years of Service, Building Hope",
     year: "2023",
     publishedDate: "2024-03-15",
     pages: 48,
@@ -32,12 +32,12 @@ const annualReportsData = {
     coverImage:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
     executiveSummary:
-      "2023 marked a transformative year for Swanthana as we expanded our reach and deepened our impact in women's mental health rehabilitation. With 55+ women successfully rehabilitated and a 100% family satisfaction rate, we've proven that compassionate, evidence-based care can truly transform lives.",
+      "2023 marked a transformative year for Swanthana as we expanded our reach and deepened our impact in women's mental health rehabilitation. With 164 members treated, including 97 with addiction and 67 with psychiatric conditions, we've proven that compassionate, evidence-based care can truly transform lives.",
     keyStats: [
       {
         icon: <Users className="w-6 h-6" />,
-        number: "55+",
-        label: "Women Rehabilitated",
+        number: "164",
+        label: "Members Treated",
         description:
           "Successfully completed our comprehensive rehabilitation programs",
       },
@@ -72,7 +72,7 @@ const annualReportsData = {
       {
         title: "Our Impact in Numbers",
         content:
-          "This year, we served 55+ women across various age groups and conditions. Our comprehensive approach, combining medical treatment, counseling, life skills training, and family support, has yielded remarkable results. The 100% family satisfaction rate speaks to our commitment to involving families in the healing process.",
+          "This year, we served 164 members across various age groups and conditions, including 97 addiction cases and 67 psychiatric cases. Our comprehensive approach, combining medical treatment, counseling, life skills training, and family support, has yielded remarkable results.",
       },
       {
         title: "Treatment Programs & Innovations",

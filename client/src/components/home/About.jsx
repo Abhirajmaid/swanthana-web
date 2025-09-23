@@ -1,25 +1,31 @@
-import { HandHeart, Users, Sparkles, Info } from "lucide-react";
+import { HandHeart, Users, Sparkles, Info, Brain, Award } from "lucide-react";
 import Image from "next/image";
 import SectionHeader from "@/src/components/common/SectionHeader";
 
 export default function About() {
   const stats = [
     {
-      icon: <HandHeart className="w-6 h-6" />,
-      number: "55+",
-      label: "Women Rehabilitated",
+      icon: <Award className="w-6 h-6" />,
+      number: "3 Years",
+      label: "of Service",
       color: "text-brand-primary",
     },
     {
       icon: <Users className="w-6 h-6" />,
-      number: "7+",
-      label: "Conditions Treated",
+      number: "164",
+      label: "Members Treated",
       color: "text-brand-secondary",
     },
     {
-      icon: <Sparkles className="w-6 h-6" />,
-      number: "1 Year",
-      label: "of Service",
+      icon: <HandHeart className="w-6 h-6" />,
+      number: "97",
+      label: "Addiction Cases",
+      color: "text-brand-primary",
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      number: "67",
+      label: "Psychiatric Cases",
       color: "text-brand-primary",
     },
   ];
@@ -43,7 +49,7 @@ export default function About() {
 
             {/* Stats Strip */}
             <div className="absolute -bottom-8 left-2 right-2 sm:-bottom-10 sm:left-10 sm:right-10">
-              <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 grid grid-cols-3 gap-4 sm:gap-8">
+              <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className={`${stat.color} mb-2`}>{stat.icon}</div>
