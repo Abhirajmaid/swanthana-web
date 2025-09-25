@@ -88,7 +88,7 @@ export default function VisitorsPage() {
               className="p-0 flex items-start gap-6"
             >
               {/* Left-aligned image */}
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl overflow-hidden flex-shrink-0">
+              <div className="relative w-[360px] h-[200px] sm:w-[440px] sm:h-[248px] md:w-[520px] md:h-[292px] rounded-xl overflow-hidden flex-shrink-0">
                 <Image src={v.image} alt={v.name} fill className="object-cover" />
               </div>
 
