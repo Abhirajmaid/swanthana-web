@@ -69,8 +69,8 @@ export default function ContactUsPage() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Our Center",
-      primary: "Saroornagar, Hyderabad",
-      secondary: "H.No. 17-1-391/T/261, Saraswathi Nagar",
+      primary: "plot no 47 phanigiri colony,near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple, chaitanyapuri, Hyderabad,500060",
+      secondary: "",
       description: "Schedule a visit to see our facility",
       color: "from-purple-500/10 to-violet-500/10",
       iconBg: "bg-purple-500/10 text-purple-600",
@@ -166,7 +166,7 @@ export default function ContactUsPage() {
                   </div>
                   <div className="rounded-2xl border border-gray-100 p-4">
                     <div className="text-xs text-brand-gray">Location</div>
-                    <div className="font-semibold text-brand-dark">Saroornagar, Hyderabad (on-site)</div>
+                    <div className="font-semibold text-brand-dark">chaitanyapuri, Hyderabad,500060 (on-site)</div>
                   </div>
                   <div className="rounded-2xl border border-gray-100 p-4">
                     <div className="text-xs text-brand-gray">Roles</div>
@@ -238,14 +238,13 @@ export default function ContactUsPage() {
                 Find Our Location
               </h3>
               <p className="text-brand-gray">
-                H.No. 17-1-391/T/261, Saraswathi Nagar, Saroornagar, Hyderabad –
-                500035, Telangana, India
+                plot no 47 phanigiri colony,near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple, chaitanyapuri, Hyderabad,500060
               </p>
             </div>
             <div className="h-80">
               <iframe
                 title="Swanthana Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.698369260399!2d78.54048907417972!3d17.429982983469863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993948eaaac1%3A0x4bc287d7a4ff3ef4!2sSaraswathi%20Nagar%2C%20Saroornagar%2C%20Hyderabad%2C%20Telangana%20500035!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps?q=plot%20no%2047%20phanigiri%20colony%2Cnear%20sri%20sri%20sri%20kosagundla%20phanigiri%20lakshmi%20narsimha%20swami%20temple%2C%20chaitanyapuri%2C%20Hyderabad%2C500060&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

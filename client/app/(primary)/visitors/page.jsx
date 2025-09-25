@@ -75,8 +75,8 @@ export default function VisitorsPage() {
       {/* Hero-style header for stronger visual impact */}
       <HeroSection
         title="Our Visitors"
-        subtitle="Leaders from healthcare, corporates and the community who visited our centre"
-        image={visitors[0]?.image}
+        subtitle="Leaders from healthcare, corporates, and the community who visited our centre"
+        image={undefined}
         showCtas={false}
       />
 

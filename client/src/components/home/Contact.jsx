@@ -15,8 +15,9 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Our Center",
-      primary: "Saroornagar, Hyderabad",
-      secondary: "H.No. 17-1-391/T/261, Saraswathi Nagar",
+      primary:
+        "plot no 47 phanigiri colony,near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple, chaitanyapuri, Hyderabad,500060",
+      secondary: "",
       color: "from-purple-500/10 to-violet-500/10",
       iconBg: "bg-purple-500/10 text-purple-600",
     },

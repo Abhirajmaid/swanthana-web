@@ -29,12 +29,14 @@ export default function HeroSection({ title, subtitle, image, showCtas = true })
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-brand-dark via-brand-primary to-brand-dark bg-clip-text text-transparent mb-6 leading-tight">
-            {title}
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary">
+              {title}
+            </span>
           </h1>
 
           {subtitle && (
-            <p className="text-lg md:text-xl text-brand-gray mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-brand-dark/80 mb-8 max-w-3xl leading-relaxed">
               {subtitle}
             </p>
           )}

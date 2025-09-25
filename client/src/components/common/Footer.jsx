@@ -56,11 +56,9 @@ export default function Footer() {
             </h3>
             <div className="space-y-2 text-brand-gray text-sm">
               <p>
-                📍 H.No. 17-1-391/T/261,
+                📍 plot no 47 phanigiri colony,near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple,
                 <br />
-                Saraswathi Nagar, Saroornagar,
-                <br />
-                Hyderabad – 500035, Telangana, India
+                chaitanyapuri, Hyderabad,500060
               </p>
               <p>📞 +91 98495 37798</p>
               <p>✉️ swanthanarehab@gmail.com</p>

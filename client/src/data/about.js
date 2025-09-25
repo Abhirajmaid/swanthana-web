@@ -67,7 +67,7 @@ export const aboutData = {
     approach: {
         subtitle: "How We Help Women Heal and Thrive",
         heading: "A Holistic, Woman-Centric Approach",
-        intro: "At Swanthana, we understand that every woman’s journey to recovery is unique. Our structured process ensures effective healing, dignity, and reintegration.",
+        intro: "At Swanthana, located at plot no 47 phanigiri colony, near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple, chaitanyapuri, Hyderabad,500060, we understand that every woman’s journey to recovery is unique. Our structured process ensures effective healing, dignity, and reintegration.",
         image:
             "/images/updatedimg/Our_approach/Picture19.jpg",
         steps: [
