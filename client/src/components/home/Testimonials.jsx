@@ -76,8 +76,8 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4">
         <SectionHeader
           badge={{ icon: <MessageCircle />, text: "Testimonials" }}
-          title="82000+"
-          gradientText="Lives Touched"
+          title="Transforming"
+          gradientText="Lives"
           description="Hear from our patients and their families"
         />
         <div className="space-y-10">

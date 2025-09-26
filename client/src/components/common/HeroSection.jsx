@@ -44,22 +44,6 @@ export default function HeroSection({ title, subtitle, image, showCtas = true })
           {/* Call-to-action buttons */}
           {showCtas && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button className="inline-flex items-center px-8 py-4 rounded-full text-white font-semibold bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-primary/90 hover:to-brand-secondary/90 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
-                Get Started
-                <svg
-                  className="ml-2 w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </button>
               <button className="inline-flex items-center px-8 py-4 rounded-full text-brand-primary font-semibold bg-white/80 backdrop-blur-sm hover:bg-white border border-brand-primary/20 hover:border-brand-primary/30 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Learn More
               </button>

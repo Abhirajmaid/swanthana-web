@@ -148,22 +148,7 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* Impact Stats */}
-      <section className="py-12 bg-brand-light/30">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {impactData.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-3">{item.icon}</div>
-                <div className="text-2xl font-bold text-brand-primary mb-2">
-                  ₹{item.amount.toLocaleString()}
-                </div>
-                <p className="text-sm text-brand-gray">{item.impact}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Impact Stats removed as per request */}
 
       {/* Donation Form */}
       <section className="py-16">

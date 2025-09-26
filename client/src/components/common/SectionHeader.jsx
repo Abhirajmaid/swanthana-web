@@ -6,6 +6,7 @@ export default function SectionHeader({
   gradientText = null,
   description = null,
   alignment = "center",
+  useGradient = true,
 }) {
   const alignmentClasses = {
     center: "text-center",
@@ -38,7 +39,11 @@ export default function SectionHeader({
         {gradientText && (
           <>
             {" "}
-            <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
+            <span className={
+              useGradient
+                ? "bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent"
+                : "text-brand-secondary"
+            }>
               {gradientText}
             </span>
           </>

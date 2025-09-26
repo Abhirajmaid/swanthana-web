@@ -23,7 +23,7 @@ const annualReportsData = {
     id: 1,
     slug: "annual-report-2023",
     title: "Annual Report 2023",
-    subtitle: "3 Years of Service, Building Hope",
+    subtitle: "2+ years of Service, Building Hope",
     year: "2023",
     publishedDate: "2024-03-15",
     pages: 48,

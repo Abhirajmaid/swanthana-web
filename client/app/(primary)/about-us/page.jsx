@@ -83,33 +83,7 @@ function ApproachCarousel() {
 export default function AboutUsPage() {
   return (
     <main className="bg-white min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-dark py-[160px] md:py-[220px] overflow-hidden">
-        <div className="absolute inset-0 w-full h-full z-0">
-          <Image
-            src={aboutData.hero.image}
-            alt="About Swanthana"
-            className="w-full h-full object-cover object-center"
-            priority
-            sizes="100vw"
-            width={2500}
-            height={2500}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/80 via-brand-dark/60 to-white" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center md:items-end justify-between relative z-10">
-          <div className="md:w-2/3 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
-              {aboutData.hero.title}
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl md:max-w-3xl mb-8 md:mb-0 drop-shadow leading-relaxed">
-              {aboutData.hero.subtitle}
-            </p>
-          </div>
-        </div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-brand-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl" />
-      </section>
+      {/* Hero image removed as requested */}
 
       {/* Our Story */}
       <section className="py-20 bg-gradient-to-br from-white via-brand-background to-white relative overflow-hidden">

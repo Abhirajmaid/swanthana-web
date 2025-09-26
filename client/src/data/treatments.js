@@ -2,7 +2,7 @@ export const treatments = [
     {
         title: "De-Addiction Treatment",
         slug: "de-addiction-treatment",
-        image: "/images/updatedimg/Deaddiction_treatment/Picture25.jpg",
+        image: "/images/updatedimg/manjulaconcelling.jpg",
         description:
             "Comprehensive de-addiction programs for women dealing with alcohol, drug, or substance dependence. Focused on safe withdrawal and long-term recovery.",
         highlights: [
@@ -60,7 +60,7 @@ export const treatments = [
     {
         title: "Counseling & Therapy",
         slug: "counseling-therapy",
-        image: "/images/updatedimg/councelling_therepy/Picture4.jpg",
+        image: "/images/updatedimg/councelling_therepy/Picture6.jpg",
         description:
             "Individual and group counseling sessions to support emotional healing, trauma recovery, and overall mental well-being.",
         highlights: [
@@ -113,6 +113,34 @@ export const treatments = [
             title: "Women's Rehabilitation & Life Skills | Swanthana",
             description:
                 "Life skills and social rehabilitation services for women recovering from mental health conditions and addiction at Swanthana.",
+        },
+    },
+    {
+        title: "Emotional & Trauma Recovery",
+        slug: "emotional-trauma-recovery",
+        image: "/images/updatedimg/Our_approach/Picture19.jpg",
+        description:
+            "Therapy and support for women dealing with emotional trauma, abuse, and long-standing mental health challenges.",
+        highlights: [
+            "Trauma Counseling",
+            "Emotional Regulation",
+            "Group Therapy",
+            "Resilience Building",
+            "Self-Esteem Coaching",
+        ],
+        longDescription: `
+        <p>Our <b>Emotional & Trauma Recovery</b> program is designed to help women process, heal, and grow from experiences of emotional distress, abuse, or PTSD.</p>
+        <ul>
+          <li>Safe therapeutic environment for emotional expression</li>
+          <li>CBT, mindfulness, and resilience-based practices</li>
+          <li>Support networks to rebuild confidence and stability</li>
+        </ul>
+        <p>We walk alongside each woman’s healing journey with compassion and strength-based care.</p>
+      `,
+        meta: {
+            title: "Women's Emotional & Trauma Recovery | Swanthana",
+            description:
+                "Therapy and trauma-informed care to heal from emotional distress and abuse at Swanthana.",
         },
     },
 ];

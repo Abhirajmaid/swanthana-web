@@ -92,15 +92,15 @@ export default function MissionVisionFounders() {
                 <div className="relative z-10">
                   {/* Image */}
                   <div className="relative mb-6 inline-block">
-                    <div className="w-32 h-32 lg:w-36 lg:h-36 rounded-full overflow-hidden shadow-xl ring-4 ring-white group-hover:ring-brand-primary/20 transition-all duration-300">
+                    <div className="w-30 h-40 lg:w-34 lg:h-44 rounded-2xl overflow-hidden shadow-xl ring-4 ring-white group-hover:ring-brand-primary/20 transition-all duration-300">
                       <img
                         src={founder.image}
                         alt={founder.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover scale-105 group-hover:scale-115 transition-transform duration-500"
                       />
                     </div>
                     {/* Decorative Ring */}
-                    <div className="absolute inset-0 rounded-full border-4 border-transparent bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl border-4 border-transparent bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
 
                   {/* Name & Role */}

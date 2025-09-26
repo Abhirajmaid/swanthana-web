@@ -1,9 +1,14 @@
-import { disorderDetails } from "@/src/data/disorders";
+import { disorderDetails as staticDisorderDetails } from "@/src/data/disorders";
+import { loadDisordersFromXlsx } from "@/src/lib/disordersLoader";
 import HeroSection from "@/src/components/common/HeroSection";
 import Image from "next/image";
+import { disorderSummaries } from "@/src/data/disorderSummaries";
+import DisorderInfoButton from "@/src/components/common/DisorderInfoButton.client";
 
-export default function DisorderDetail({ params }) {
+export default async function DisorderDetail({ params }) {
   const { slug } = params;
+  const loaded = await loadDisordersFromXlsx();
+  const disorderDetails = (loaded && Object.keys(loaded).length ? loaded : staticDisorderDetails);
   const disorder = disorderDetails[slug];
 
   if (!disorder) {
@@ -20,6 +25,7 @@ export default function DisorderDetail({ params }) {
         title={disorder.title}
         subtitle={disorder.description}
         image={disorder.image}
+        showCtas={false}
       />
       <section className="bg-white py-10">
         <div className="max-w-5xl mx-auto px-4">
@@ -35,7 +41,7 @@ export default function DisorderDetail({ params }) {
               &gt; <span className="font-semibold">{disorder.title}</span>
             </nav>
           </div>
-          <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden mb-8 shadow-lg">
+          <div className="relative w-full h-[26rem] md:h-[36rem] rounded-3xl overflow-hidden mb-8 shadow-lg" style={{ aspectRatio: '1.3/1' }}>
             <Image
               src={disorder.contentImage || disorder.image}
               alt={disorder.title}
@@ -44,11 +50,17 @@ export default function DisorderDetail({ params }) {
               priority
             />
           </div>
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-brand-primary mb-3">
-              Key Highlights
-            </h2>
-            <ul className="flex flex-wrap gap-3">
+          <div className="mb-8 flex items-center justify-between gap-4">
+            <h2 className="text-2xl font-semibold text-brand-primary mb-3">Key Highlights</h2>
+            {disorderSummaries[slug] && (
+              <DisorderInfoButton
+                title={disorderSummaries[slug].title}
+                html={disorderSummaries[slug].html}
+                modalId={`disorder-info-modal-${slug}`}
+              />
+            )}
+          </div>
+          <ul className="flex flex-wrap gap-3">
               {disorder.highlights.map((item, idx) => (
                 <li
                   key={idx}
@@ -57,8 +69,7 @@ export default function DisorderDetail({ params }) {
                   {item}
                 </li>
               ))}
-            </ul>
-          </div>
+          </ul>
           <div
             className="prose max-w-none text-brand-dark"
             dangerouslySetInnerHTML={{ __html: disorder.longDescription }}
@@ -73,6 +84,7 @@ export default function DisorderDetail({ params }) {
           </div>
         </div>
       </section>
+
     </>
   );
 }

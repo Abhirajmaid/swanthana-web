@@ -121,33 +121,7 @@ export default function ContactUsPage() {
       <section className="py-16 bg-gradient-to-b from-white to-brand-light/20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden">
-            <div className="grid md:grid-cols-2">
-              {/* Visual */}
-              <div className="relative min-h-[260px] md:min-h-[420px]">
-                <Image
-                  src="/images/updatedimg/Visitors/Picture40.jpg"
-                  alt="Volunteers at Swanthana"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="flex gap-4 text-sm">
-                    <div className="bg-white/10 backdrop-blur px-3 py-2 rounded-xl">
-                      <span className="font-semibold">Openings:</span> 18 roles
-                    </div>
-                    <div className="bg-white/10 backdrop-blur px-3 py-2 rounded-xl">
-                      <span className="font-semibold">Commitment:</span> 4–6 hrs/week
-                    </div>
-                    <div className="bg-white/10 backdrop-blur px-3 py-2 rounded-xl hidden sm:block">
-                      <span className="font-semibold">Last updated:</span> 03 Sep 2025
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8 md:p-12">
+            <div className="p-8 md:p-12">
                 <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
                   <Heart className="w-4 h-4" /> Join Us as Volunteer
                 </div>
@@ -188,7 +162,6 @@ export default function ContactUsPage() {
                   </a>
                   <span className="text-sm text-brand-gray">Response within 3–5 working days</span>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -244,7 +217,7 @@ export default function ContactUsPage() {
             <div className="h-80">
               <iframe
                 title="Swanthana Location"
-                src="https://www.google.com/maps?q=plot%20no%2047%20phanigiri%20colony%2Cnear%20sri%20sri%20sri%20kosagundla%20phanigiri%20lakshmi%20narsimha%20swami%20temple%2C%20chaitanyapuri%2C%20Hyderabad%2C500060&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.000000000000!2d78.55000000000000!3d17.43000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993948eaaac1%3A0x4bc287d7a4ff3ef4!2sPlot%20No%2047%2C%20Phanigiri%20Colony%2C%20Near%20Sri%20Sri%20Sri%20Kosagundla%20Phanigiri%20Lakshmi%20Narsimha%20Swami%20Temple%2C%20Chaitanyapuri%2C%20Hyderabad%2C%20500060!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

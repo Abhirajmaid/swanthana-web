@@ -28,35 +28,35 @@ const visitors = [
     image: "/images/updatedimg/Visitors/Picture42.jpg",
   },
   {
-    name: "Student Internships",
+    name: "Students from college of community sciences",
     role: "Course Curriculum Visit",
     date: "Recent Visit",
     quote:
-      "Student's internships and visiting Swanthana as part of their course curriculum",
+      "Students from college of community sciences",
     image: "/images/updatedimg/Visitors/Picture43.jpg",
   },
   {
-    name: "College of Community Sciences",
+    name: "   Students from NALSAR university",
     role: "Student Visit",
     date: "Recent Visit",
     quote:
-      "Students from college of community sciences",
+      "   Students from NALSAR university",
     image: "/images/updatedimg/Visitors/Picture44.jpg",
   },
   {
-    name: "NALSAR University",
+    name: "Students from community sciences PJTSAU ",
     role: "Student Visit",
     date: "Recent Visit",
     quote:
-      "Students from NALSAR university",
+      "Students from community sciences PJTSAU ",
     image: "/images/updatedimg/Visitors/Picture45.jpg",
   },
   {
-    name: "Community Sciences PJTSAU",
+    name: "Social work Students from Sweden",
     role: "Student Visit",
     date: "Recent Visit",
     quote:
-      "Students from community sciences PJTSAU",
+      " Social work Students from Sweden visited  swanthana  as part of their work ",
     image: "/images/updatedimg/Visitors/Picture46.jpg",
   },
   {
@@ -76,7 +76,7 @@ export default function VisitorsPage() {
       <HeroSection
         title="Our Visitors"
         subtitle="Leaders from healthcare, corporates, and the community who visited our centre"
-        image={undefined}
+        image="/images/updatedimg/Visitors/Picture44.jpg"
         showCtas={false}
       />
 
@@ -97,7 +97,7 @@ export default function VisitorsPage() {
                 <div className="text-xl font-semibold text-brand-dark">{v.name}</div>
                 <div className="text-sm text-brand-gray mt-1">{v.role}</div>
                 <div className="text-xs text-brand-gray mt-1">Visited on {v.date}</div>
-                <p className="text-sm text-brand-dark/80 mt-3 leading-relaxed max-w-3xl">“{v.quote}”</p>
+                <p className="text-sm text-brand-dark/80 mt-3 leading-relaxed max-w-3xl">"{v.quote}"</p>
               </div>
             </div>
           ))}

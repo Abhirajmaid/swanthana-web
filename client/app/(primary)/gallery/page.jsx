@@ -37,44 +37,8 @@ const galleryImages = [
     alt: "Physiotherapy",
   },
   {
-    src: "/images/updatedimg/meet_our_expert/Picture15.jpg",
-    alt: "Play Area",
-  },
-  {
-    src: "/images/updatedimg/founder_img/Manjula.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/founder_img/Mamatha.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/meet_our_expert/Picture16.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/meet_our_expert/Picture17.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/bipolar/IMG-20250919-WA0032.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/bipolar/IMG-20250919-WA0033.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/bipolar/IMG-20250919-WA0034.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/bipolar/IMG-20250919-WA0035.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/updatedimg/substance_use/IMG-20250919-WA0038.jpg",
-    alt: "Founder",
+    src: "/images/stocks/18.jpg",
+    alt: "Facility",
   },
   {
     src: "/images/stocks/19.jpg",
@@ -98,10 +62,6 @@ const galleryImages = [
   },
   {
     src: "/images/stocks/24.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/stocks/25.jpg",
     alt: "Founder",
   },
   {
@@ -138,10 +98,6 @@ const galleryImages = [
   },
   {
     src: "/images/stocks/34.jpg",
-    alt: "Founder",
-  },
-  {
-    src: "/images/stocks/35.jpg",
     alt: "Founder",
   },
   {
@@ -189,7 +145,9 @@ export default function GalleryPage() {
       <section className="py-16 bg-white">
         {/* Responsive grid, fixed box ratio like reference */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-6xl mx-auto px-2">
-          {galleryImages.map((img, idx) => (
+          {galleryImages
+            .filter((img) => typeof img.src === "string" && img.src.trim() !== "")
+            .map((img, idx) => (
             <div
               key={idx}
               className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer flex items-center justify-center bg-[#f8fafc]"
@@ -228,8 +186,8 @@ export default function GalleryPage() {
               </span>
             </button>
             <Image
-              src={galleryImages[modal].src}
-              alt={galleryImages[modal].alt}
+              src={(galleryImages[modal] || {}).src || ""}
+              alt={(galleryImages[modal] || {}).alt || "Gallery image"}
               width={900}
               height={600}
               className="w-full h-auto rounded-2xl object-contain bg-white"

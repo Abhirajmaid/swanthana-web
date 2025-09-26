@@ -20,6 +20,7 @@ export default function TreatmentDetail({ params }) {
         title={treatment.title}
         subtitle={treatment.description}
         image={treatment.image}
+        showCtas={false}
       />
       <section className="bg-white py-10">
         <div className="max-w-5xl mx-auto px-4">
@@ -36,7 +37,7 @@ export default function TreatmentDetail({ params }) {
               &gt; <span className="font-semibold">{treatment.title}</span>
             </nav>
           </div>
-          <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden mb-8 shadow-lg">
+          <div className="relative w-full h-[26rem] md:h-[36rem] rounded-3xl overflow-hidden mb-8 shadow-lg" style={{ aspectRatio: '1.3/1' }}>
             <Image
               src={treatment.image}
               alt={treatment.title}
@@ -64,14 +65,7 @@ export default function TreatmentDetail({ params }) {
             className="prose max-w-none text-brand-dark"
             dangerouslySetInnerHTML={{ __html: treatment.longDescription }}
           />
-          <div className="mt-10">
-            <a
-              href="/treatment"
-              className="inline-block bg-brand-primary text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-brand-primary/90 transition"
-            >
-              Back to Treatments
-            </a>
-          </div>
+          
         </div>
       </section>
     </>

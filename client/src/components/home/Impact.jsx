@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 
 import Image from "next/image";
-import { useState } from "react";
 import SectionHeader from "@/src/components/common/SectionHeader";
 
 export const impactTabs = [
@@ -23,7 +22,7 @@ export const impactTabs = [
     stats: [
       {
         icon: <Award className="w-7 h-7" />,
-        number: "3 Years",
+        number: "2+ years",
         label: "of Service",
         color: "bg-yellow-100 text-yellow-600",
         border: "border-yellow-200",
@@ -51,80 +50,9 @@ export const impactTabs = [
       },
     ],
   },
-  {
-    label: "Our Reach",
-    description:
-      "Swanthana began in Hyderabad, but our mission is expanding. Through local partnerships and word-of-mouth referrals, we are creating a safe space for women in need of mental health and addiction recovery services across Telangana.",
-    stats: [
-      {
-        icon: <Globe className="w-7 h-7" />,
-        number: "1",
-        label: "Center in Hyderabad",
-        color: "bg-indigo-100 text-indigo-600",
-        border: "border-indigo-200",
-      },
-      {
-        icon: <UserCheck className="w-7 h-7" />,
-        number: "10+",
-        label: "Medical & Support Staff",
-        color: "bg-green-100 text-green-600",
-        border: "border-green-200",
-      },
-      {
-        icon: <Activity className="w-7 h-7" />,
-        number: "60+",
-        label: "Sessions/Month",
-        color: "bg-orange-100 text-orange-600",
-        border: "border-orange-200",
-      },
-      {
-        icon: <BookOpen className="w-7 h-7" />,
-        number: "5+",
-        label: "Awareness Events",
-        color: "bg-cyan-100 text-cyan-600",
-        border: "border-cyan-200",
-      },
-    ],
-  },
-  {
-    label: "Recognition",
-    description:
-      "Though young, Swanthana is gaining recognition through real success stories, family testimonials, and collaborations with health professionals who trust our care model.",
-    stats: [
-      {
-        icon: <Award className="w-7 h-7" />,
-        number: "5+",
-        label: "Public Mentions",
-        color: "bg-yellow-100 text-yellow-600",
-        border: "border-yellow-200",
-      },
-      {
-        icon: <Star className="w-7 h-7" />,
-        number: "4.9/5",
-        label: "Average Family Rating",
-        color: "bg-purple-100 text-purple-600",
-        border: "border-purple-200",
-      },
-      {
-        icon: <Smile className="w-7 h-7" />,
-        number: "98%",
-        label: "Positive Recovery Rate",
-        color: "bg-emerald-100 text-emerald-600",
-        border: "border-emerald-200",
-      },
-      {
-        icon: <Users className="w-7 h-7" />,
-        number: "20+",
-        label: "Partner Referrals",
-        color: "bg-blue-100 text-blue-600",
-        border: "border-blue-200",
-      },
-    ],
-  },
 ];
 
 export default function Impact() {
-  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <section className="relative py-24 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/10 overflow-hidden">
@@ -157,30 +85,13 @@ export default function Impact() {
               description="Swanthana is more than a center—it's a movement for hope, inclusion, and lifelong growth. Discover how our programs, people, and partnerships are making a difference."
               alignment="left"
             />
-            {/* Tabs */}
-            <div className="mb-8 flex flex-wrap gap-3">
-              {impactTabs.map((tab, idx) => (
-                <button
-                  key={tab.label}
-                  onClick={() => setActiveTab(idx)}
-                  className={`px-5 py-2 rounded-full font-semibold text-sm transition-all border ${
-                    activeTab === idx
-                      ? "bg-brand-primary text-white border-brand-primary shadow"
-                      : "bg-white text-brand-primary border-brand-primary/20 hover:bg-brand-primary/10"
-                  }`}
-                  type="button"
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-            {/* Tab Content */}
+            {/* Content */}
             <div>
               <p className="text-brand-gray mb-8">
-                {impactTabs[activeTab].description}
+                {impactTabs[0].description}
               </p>
               <div className="grid grid-cols-2 gap-6">
-                {impactTabs[activeTab].stats.map((stat, idx) => (
+                {impactTabs[0].stats.map((stat, idx) => (
                   <div
                     key={idx}
                     className={`flex flex-col items-center justify-center rounded-2xl border ${stat.border} bg-white shadow-md hover:shadow-xl transition-all duration-300 py-8 px-4 group`}

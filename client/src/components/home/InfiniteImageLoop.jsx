@@ -14,6 +14,12 @@ const ImageCard = ({ img }) => (
       src={img}
       alt="sahayata"
       className="w-full h-full object-cover rounded-xl"
+      loading="lazy"
+      onError={(e) => {
+        // Hide the card if the image fails to load to avoid blank gaps
+        const parent = e.currentTarget.parentElement;
+        if (parent) parent.style.display = "none";
+      }}
     />
   </div>
 );
@@ -46,6 +52,7 @@ const InfiniteImageLoop = () => (
         reverse={i % 2}
       >
         {shuffle(sliderImages)
+          .filter((src) => typeof src === "string" && src.trim() !== "")
           .slice(0, TAGS_PER_ROW)
           .map((tag) => (
             <ImageCard img={tag} key={tag} />

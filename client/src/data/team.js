@@ -1,8 +1,8 @@
 export const teamCategories = {
     doctors: [
         {
-            name: "Psychiatric Doctor",
-            role: "Psychiatric Doctor",
+            name: "Doctors and Consultation",
+            role: "Mental Health Specialist",
             image: "/images/updatedimg/meet_our_expert/Picture15.jpg",
             bio: "Expert in psychiatric care and mental health treatment",
             social: {
@@ -12,8 +12,19 @@ export const teamCategories = {
             },
         },
         {
+            name: "De-addiction Specialist Counselling",
+            role: "Addiction Recovery Counsellor",
+            image: "/images/updatedimg/manjulaconcelling.jpg",
+            bio: "Guidance for alcohol and substance recovery with family-focused counselling",
+            social: {
+                linkedin: "https://linkedin.com/",
+                twitter: "https://twitter.com/",
+                email: "mailto:deaddiction@swanthana.org",
+            },
+        },
+        {
             name: "Clinical Psychologist",
-            role: "Clinical Psychologist",
+            role: "Therapy Specialist",
             image: "/images/updatedimg/meet_our_expert/Picture16.jpg",
             bio: "Specialized in clinical psychology and therapeutic interventions",
             social: {
@@ -24,7 +35,7 @@ export const teamCategories = {
         },
         {
             name: "Speech Therapist",
-            role: "Speech Therapist",
+            role: "Communication Specialist",
             image: "/images/updatedimg/meet_our_expert/Picture17.jpg",
             bio: "Expert in speech therapy and communication disorders",
             social: {

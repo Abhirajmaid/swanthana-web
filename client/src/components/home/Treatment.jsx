@@ -68,12 +68,6 @@ export default function Treatment({ variant = "default" }) {
                 ))}
             </div>
             <div className="flex items-center justify-between">
-              <Link
-                href={`/treatment/${treatment.slug}`}
-                className="btn-primary rounded-full px-5 py-2 text-sm shadow"
-              >
-                Learn More
-              </Link>
               <span className="text-xs text-white/80">View Treatment</span>
             </div>
           </div>

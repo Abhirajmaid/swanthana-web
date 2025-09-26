@@ -8,7 +8,7 @@ export const aboutData = {
     },
     story: {
         image:
-            "/images/updatedimg/ourstory.jpg",
+            "/images/updatedimg/welcoming.jpg",
         title: "Our Story",
         points: [
             {
@@ -119,7 +119,7 @@ export const aboutData = {
         },
     ],
     impact: [
-        { label: "Years of Service", value: "3" },
+        { label: "Years of Service", value: "2+ years" },
         { label: "Members Treated", value: "164" },
         { label: "Addiction Cases", value: "97" },
     ],
