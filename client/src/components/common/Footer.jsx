@@ -60,7 +60,7 @@ export default function Footer() {
                 <br />
                 chaitanyapuri, Hyderabad,500060
               </p>
-              <p>📞 +91 98495 37798</p>
+              <p>📞 +91 95334 28675, +91 98494 18592</p>
               <p>✉️ swanthanarehab@gmail.com</p>
             </div>
           </div>

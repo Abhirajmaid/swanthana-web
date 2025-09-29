@@ -51,7 +51,7 @@ export default function ContactUsPage() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone Support",
-      primary: "+91 98495 37798",
+      primary: "+91 95334 28675, +91 98494 18592",
       secondary: "Mon–Sat, 9 AM – 6 PM",
       description: "Immediate assistance for urgent matters",
       color: "from-green-500/10 to-emerald-500/10",
