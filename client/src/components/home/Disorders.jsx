@@ -4,15 +4,29 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
+import { X } from "lucide-react";
 import { AlertTriangle, Brain, Smile, Activity } from "lucide-react";
-import { disorderDetails } from "@/src/data/disorders";
+import { disorderDetails as staticDisorderDetails } from "@/src/data/disorders";
+import { useEffect, useState } from "react";
+import { loadDisordersFromXlsx } from "@/src/lib/disordersLoader";
 import SectionHeader from "@/src/components/common/SectionHeader";
 
-// Build disorders array from disorderDetails keys
-const disorders = Object.entries(disorderDetails).map(([slug, data]) => ({
-  ...data,
-  href: `/disorders/${slug}`,
-}));
+// Build disorders from runtime data
+function useDisorders() {
+  const [details, setDetails] = useState(staticDisorderDetails);
+  useEffect(() => {
+    (async () => {
+      const loaded = await loadDisordersFromXlsx();
+      if (loaded && Object.keys(loaded).length) setDetails(loaded);
+    })();
+  }, []);
+  return Object.entries(details)
+    .filter(([, data]) => data.title !== "Emotional & Trauma Recovery")
+    .map(([slug, data]) => ({
+      ...data,
+      href: `/disorders/${slug}`,
+    }));
+}
 
 // Icon mapping for demo (customize as needed)
 const disorderIcons = {
@@ -22,7 +36,7 @@ const disorderIcons = {
   ADHD: AlertTriangle,
 };
 
-function DisorderCard({ title, href, isActive }) {
+function DisorderCard({ title, href, isActive, onLearnMore }) {
   const Icon = disorderIcons[title] || Brain;
   return (
     <div
@@ -52,13 +66,15 @@ function DisorderCard({ title, href, isActive }) {
         <div className="flex-1" />
         {/* Action Footer */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-4">
-          <Link
-            href={href}
+          <button
+            onClick={onLearnMore}
             className="btn-primary rounded-full px-6 py-2 font-semibold text-sm shadow hover:scale-105 transition-transform"
           >
             Learn More
+          </button>
+          <Link href={href} className="text-xs text-brand-primary/70 hover:underline">
+            View Disorder Page
           </Link>
-          <span className="text-xs text-brand-gray/60">View Disorder</span>
         </div>
       </div>
     </div>
@@ -66,6 +82,8 @@ function DisorderCard({ title, href, isActive }) {
 }
 
 export default function Disorders() {
+  const disorders = useDisorders();
+  const [active, setActive] = useState(null);
   return (
     <section className="py-10 sm:py-16 md:py-24 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-2 sm:px-4">
@@ -99,12 +117,39 @@ export default function Disorders() {
                     title={disorder.title}
                     href={disorder.href}
                     isActive={isActive}
+                    onLearnMore={() => setActive(disorder)}
                   />
                 )}
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
+        {active && (
+          <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center" onClick={() => setActive(null)}>
+            <div className="bg-white max-w-2xl w-full mx-4 rounded-2xl shadow-xl relative" onClick={(e) => e.stopPropagation()}>
+              <button className="absolute top-3 right-3 p-2 bg-gray-100 rounded-full" onClick={() => setActive(null)} aria-label="Close">
+                <X className="w-5 h-5 text-brand-primary" />
+              </button>
+              <div className="p-6 sm:p-8">
+                <h3 className="text-2xl font-bold text-brand-dark mb-2">{active.title}</h3>
+                <p className="text-brand-gray mb-4">{active.description}</p>
+                {active.highlights?.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {active.highlights.slice(0, 8).map((h, i) => (
+                      <span key={i} className="bg-brand-primary/10 text-brand-primary text-xs px-3 py-1 rounded-full">
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <div className="flex gap-3">
+                  <Link href={active.href} className="btn-primary px-5 py-2 rounded-full">Open Full Page</Link>
+                  <button onClick={() => setActive(null)} className="btn-border px-5 py-2 rounded-full">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
         <style jsx global>{`
           .disorder-slider {
             padding: 1rem 0 3rem;

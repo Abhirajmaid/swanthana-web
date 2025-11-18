@@ -25,7 +25,8 @@ export default function SuccessStoriesPage() {
       <HeroSection
         title="Success Stories"
         subtitle="Real stories of hope, healing, and transformation from women who found their path to recovery at Swanthana."
-        image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1200&q=80"
+        image="/images/updatedimg/success.jpeg"
+        showCtas={false}
       />
 
       {/* Filter Section */}
@@ -69,31 +70,17 @@ export default function SuccessStoriesPage() {
                 href={`/success-stories/${story.slug}`}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer"
               >
-                {/* Story Image */}
-                <div className="relative w-full h-56 overflow-hidden">
-                  <Image
-                    src={story.image}
-                    alt={story.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-
-                  {/* Story metadata overlay */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center justify-between text-white text-sm">
-                      <span className="bg-brand-primary px-3 py-1 rounded-full text-xs font-medium">
-                        {story.condition}
-                      </span>
-                      <span className="bg-black/50 px-3 py-1 rounded-full text-xs backdrop-blur-sm">
-                        {story.treatmentDuration}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Story Content */}
                 <div className="p-6">
+                  {/* Story metadata */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-brand-primary px-3 py-1 rounded-full text-xs font-medium text-white">
+                      {story.condition}
+                    </span>
+                    <span className="bg-gray-100 px-3 py-1 rounded-full text-xs text-brand-gray">
+                      {story.treatmentDuration}
+                    </span>
+                  </div>
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center">
                       <span className="text-brand-primary font-semibold text-sm">

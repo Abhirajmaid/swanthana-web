@@ -51,7 +51,7 @@ export default function ContactUsPage() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone Support",
-      primary: "+91 98495 37798",
+      primary: "+91 95334 28675, +91 98494 18592",
       secondary: "Mon–Sat, 9 AM – 6 PM",
       description: "Immediate assistance for urgent matters",
       color: "from-green-500/10 to-emerald-500/10",
@@ -69,8 +69,8 @@ export default function ContactUsPage() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Our Center",
-      primary: "Saroornagar, Hyderabad",
-      secondary: "H.No. 17-1-391/T/261, Saraswathi Nagar",
+      primary: "plot no 47 phanigiri colony,near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple, chaitanyapuri, Hyderabad,500060",
+      secondary: "",
       description: "Schedule a visit to see our facility",
       color: "from-purple-500/10 to-violet-500/10",
       iconBg: "bg-purple-500/10 text-purple-600",
@@ -114,6 +114,55 @@ export default function ContactUsPage() {
               support, referrals, volunteering, donations, or any
               recovery-related queries.
             </p>
+          </div>
+        </div>
+      </section>
+      {/* Join as Volunteer - Final Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-brand-light/20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden">
+            <div className="p-8 md:p-12">
+                <div className="inline-flex items-center gap-2 bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                  <Heart className="w-4 h-4" /> Join Us as Volunteer
+                </div>
+                <h2 className="text-3xl font-bold text-brand-dark mb-3">Be a part of the healing journey</h2>
+                <p className="text-brand-gray leading-relaxed mb-6">
+                  Contribute your time and skills to support rehabilitation, therapy facilitation, and
+                  community outreach. Volunteers receive structured onboarding, role-specific training,
+                  and experience certificates.
+                </p>
+
+                {/* Meta data list */}
+                <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Program</div>
+                    <div className="font-semibold text-brand-dark">Swanthana Volunteer Fellowship 2025</div>
+                  </div>
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Location</div>
+                    <div className="font-semibold text-brand-dark">chaitanyapuri, Hyderabad,500060 (on-site)</div>
+                  </div>
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Roles</div>
+                    <div className="font-semibold text-brand-dark">Therapy Support, Admin, Events, Outreach</div>
+                  </div>
+                  <div className="rounded-2xl border border-gray-100 p-4">
+                    <div className="text-xs text-brand-gray">Duration</div>
+                    <div className="font-semibold text-brand-dark">Minimum 8 weeks (flexible schedules)</div>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="mailto:swanthanarehab@gmail.com?subject=Volunteer%20Application%20-%20Swanthana&body=Name%3A%0D%0APhone%3A%0D%0ARole%20Interest%3A%0D%0AAvailability%3A%0D%0A"
+                    className="bg-brand-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-primary/90 transition-colors flex items-center gap-2"
+                  >
+                    Apply to Volunteer
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                  <span className="text-sm text-brand-gray">Response within 3–5 working days</span>
+                </div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,14 +211,13 @@ export default function ContactUsPage() {
                 Find Our Location
               </h3>
               <p className="text-brand-gray">
-                H.No. 17-1-391/T/261, Saraswathi Nagar, Saroornagar, Hyderabad –
-                500035, Telangana, India
+                plot no 47 phanigiri colony,near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple, chaitanyapuri, Hyderabad,500060
               </p>
             </div>
             <div className="h-80">
               <iframe
                 title="Swanthana Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.698369260399!2d78.54048907417972!3d17.429982983469863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993948eaaac1%3A0x4bc287d7a4ff3ef4!2sSaraswathi%20Nagar%2C%20Saroornagar%2C%20Hyderabad%2C%20Telangana%20500035!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.000000000000!2d78.55000000000000!3d17.43000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993948eaaac1%3A0x4bc287d7a4ff3ef4!2sPlot%20No%2047%2C%20Phanigiri%20Colony%2C%20Near%20Sri%20Sri%20Sri%20Kosagundla%20Phanigiri%20Lakshmi%20Narsimha%20Swami%20Temple%2C%20Chaitanyapuri%2C%20Hyderabad%2C%20500060!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

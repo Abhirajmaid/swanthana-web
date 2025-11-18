@@ -12,7 +12,6 @@ import Disorders from "@/src/components/home/Disorders";
 import InfiniteImageLoop from "@/src/components/home/InfiniteImageLoop";
 import MissionVisionFounders from "@/src/components/home/MissionVisionFounders";
 import Testimonials from "@/src/components/home/Testimonials";
-import Blogs from "@/src/components/home/Blogs";
 
 export default function Home() {
   return (
@@ -30,7 +29,6 @@ export default function Home() {
           <Team />
           <Testimonials />
         </div>
-        <Blogs />
         <Contact />
         <InfiniteImageLoop />
       </div>

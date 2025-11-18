@@ -37,12 +37,7 @@ export default function TreatmentsPage() {
                 <p className="text-sm text-brand-gray mb-4 flex-1">
                   {treatment.description}
                 </p>
-                <Link
-                  href={`/treatment/${treatment.slug}`}
-                  className="inline-block mt-auto bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-brand-primary/90 transition"
-                >
-                  Learn More &rarr;
-                </Link>
+                
               </div>
             </div>
           ))}

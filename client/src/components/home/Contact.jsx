@@ -15,15 +15,16 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Our Center",
-      primary: "Saroornagar, Hyderabad",
-      secondary: "H.No. 17-1-391/T/261, Saraswathi Nagar",
+      primary:
+        "plot no 47 phanigiri colony,near sri sri sri kosagundla phanigiri lakshmi narsimha swami temple, chaitanyapuri, Hyderabad,500060",
+      secondary: "",
       color: "from-purple-500/10 to-violet-500/10",
       iconBg: "bg-purple-500/10 text-purple-600",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us Today",
-      primary: "+91 98495 37798",
+      primary: "+91 95334 28675, +91 98494 18592",
       secondary: "Mon–Sat, 9 AM – 6 PM",
       color: "from-green-500/10 to-emerald-500/10",
       iconBg: "bg-green-500/10 text-green-600",
@@ -110,7 +111,7 @@ export default function Contact() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="tel:+919849537798"
+                  href="tel:+919533428675"
                   className="bg-white text-brand-primary border-2 border-brand-primary px-6 py-3 rounded-full font-semibold hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center gap-2"
                 >
                   <Phone className="w-4 h-4" />

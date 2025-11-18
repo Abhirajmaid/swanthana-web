@@ -14,14 +14,13 @@ const annualReports = [
     year: "2023",
     description:
       "A comprehensive overview of Swanthana's achievements, impact, and growth throughout 2023. Discover our journey of transforming lives and building stronger communities.",
-    coverImage:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
+    coverImage: "/images/updatedimg/Annual_report/Picture38.jpg",
     publishedDate: "2024-03-15",
     pages: 48,
     fileSize: "2.4 MB",
     downloadUrl: "/documents/swanthana-annual-report-2023.pdf",
     highlights: [
-      "55+ Women Successfully Rehabilitated",
+      "164 Members Treated",
       "7 Different Conditions Treated",
       "100% Family Satisfaction Rate",
       "New Treatment Programs Launched",
@@ -35,8 +34,7 @@ const annualReports = [
     year: "2022",
     description:
       "Our inaugural year report showcasing the foundation of Swanthana and our early impact in women's mental health rehabilitation and de-addiction services.",
-    coverImage:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    coverImage: "/images/updatedimg/Annual_report/Picture39.jpg",
     publishedDate: "2023-04-20",
     pages: 32,
     fileSize: "1.8 MB",

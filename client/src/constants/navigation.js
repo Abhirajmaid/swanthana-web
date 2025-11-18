@@ -16,24 +16,20 @@ export const navLinks = [
     { title: "Home", href: "/" },
     { title: "About Us", href: "/about-us" },
     {
-        title: "Treatments",
+        title: "Treatment & Disorders",
         href: "/treatment",
         subLinks: [
+            // Treatments
             { title: "De-Addiction Treatment", href: "/treatment/de-addiction-treatment" },
             { title: "Psychiatric Care", href: "/treatment/psychiatric-care" },
             { title: "Counseling & Therapy", href: "/treatment/counseling-therapy" },
+            { title: "Emotional & Trauma Recovery", href: "/treatment/emotional-trauma-recovery" },
             { title: "Rehabilitation & Life Skills", href: "/treatment/rehabilitation-life-skills" },
-        ],
-    },
-    {
-        title: "Disorders",
-        href: "/disorders",
-        subLinks: [
+            // Disorders
             { title: "Schizophrenia", href: "/disorders/schizophrenia" },
             { title: "Bipolar Disorder", href: "/disorders/bipolar" },
             { title: "Dementia", href: "/disorders/dementia" },
             { title: "Substance Use Disorder", href: "/disorders/addiction" },
-            { title: "Emotional & Trauma Recovery", href: "/disorders/trauma" },
         ],
     },
     { title: "Success Stories", href: "/success-stories" },
@@ -41,11 +37,10 @@ export const navLinks = [
         title: "Media",
         href: "/media",
         subLinks: [
-            { title: "Blogs", href: "/blogs" },
             { title: "Gallery", href: "/gallery" },
             { title: "Annual Report", href: "/annual-report" },
         ],
     },
-    { title: "Doctors", href: "/doctors" },
+    { title: "Visitors", href: "/visitors" },
     { title: "Contact Us", href: "/contact-us" },
 ];

@@ -2,7 +2,7 @@ export const blogs = [
   {
     title: "The Road to Recovery: Inside Swanthana’s Rehabilitation Journey",
     slug: "inside-swanthana-rehab-journey",
-    image: "/images/stocks/34.jpg",
+    image: "/images/updatedimg/about_page_image.jpg",
     date: "2024-06-01",
     excerpt: "Discover how Swanthana transforms lives through holistic care, structured therapy, and deep compassion for women recovering from mental health challenges.",
     author: "Team Swanthana",
@@ -24,7 +24,7 @@ export const blogs = [
   {
     title: "Why Women Hide Their Mental Illness: Stigma and Survival",
     slug: "why-women-hide-mental-illness",
-    image: "/images/stocks/34.jpg",
+    image: "/images/updatedimg/about_page_image.jpg",
     date: "2024-06-06",
     excerpt: "Explore why countless women in India hide their psychological struggles and how Swanthana creates a safe space for healing without shame.",
     author: "Manjula Mummula",
@@ -46,7 +46,7 @@ export const blogs = [
   {
     title: "Understanding Schizophrenia: A Family Perspective",
     slug: "understanding-schizophrenia-family",
-    image: "/images/stocks/34.jpg",
+    image: "/images/updatedimg/about_page_image.jpg",
     date: "2024-06-12",
     excerpt: "Schizophrenia affects not just individuals but their families. Learn how Swanthana guides both patient and caregivers through recovery.",
     author: "Dr. Mamatha Raghuveer Achanta",
@@ -68,7 +68,7 @@ export const blogs = [
   {
     title: "From Addiction to Empowerment: A Woman’s Journey",
     slug: "addiction-to-empowerment",
-    image: "/images/stocks/34.jpg",
+    image: "/images/updatedimg/about_page_image.jpg",
     date: "2024-06-18",
     excerpt: "Addiction doesn’t define a woman. At Swanthana, it’s the starting point of a powerful transformation toward healing, dignity, and independence.",
     author: "Team Swanthana",
@@ -90,7 +90,7 @@ export const blogs = [
   {
     title: "Aftercare Matters: What Happens After Rehabilitation?",
     slug: "why-aftercare-matters",
-    image: "/images/stocks/34.jpg",
+    image: "/images/updatedimg/about_page_image.jpg",
     date: "2024-06-25",
     excerpt: "Rehab doesn’t end when a woman leaves the center. At Swanthana, aftercare is a vital part of sustaining long-term recovery and reintegration.",
     author: "Swanthana Aftercare Team",
@@ -112,7 +112,7 @@ export const blogs = [
   {
     title: "Volunteering at Swanthana: A First-Hand Account",
     slug: "volunteering-at-swanthana",
-    image: "/images/stocks/34.jpg",
+    image: "/images/updatedimg/about_page_image.jpg",
     date: "2024-07-01",
     excerpt: "A volunteer shares their experience inside Swanthana—witnessing hope, healing, and the strength of women rebuilding their lives.",
     author: "Shreya (Volunteer)",

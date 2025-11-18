@@ -17,14 +17,14 @@ export const missionVisionFoundersData = {
             name: "Ms. Manjula Mummula",
             role: "Founder Trustee",
             image:
-                "/images/stocks/11.jpg", // Replace with actual image if available
+                "/images/updatedimg/founder_img/Manjula.jpg",
             bio: "A compassionate leader dedicated to helping women overcome mental health and substance abuse challenges. Manjula founded Swanthana to provide a safe and structured space for recovery and empowerment.",
         },
         {
             name: "Dr. Mamatha Raghuveer Achanta",
             role: "Founder Trustee",
             image:
-                "/images/stocks/15.jpg",
+                "/images/updatedimg/founder_img/Mamatha.jpg",
             bio: "A reputed medical professional and advocate for women’s mental health. Dr. Mamatha co-founded Swanthana with a vision to offer holistic care and long-term healing to women in need.",
         },
     ],

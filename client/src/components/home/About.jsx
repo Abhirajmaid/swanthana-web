@@ -1,104 +1,97 @@
-import { HandHeart, Users, Sparkles, Info } from "lucide-react";
+import { HandHeart, Users, Sparkles, Info, Brain, Award } from "lucide-react";
 import Image from "next/image";
 import SectionHeader from "@/src/components/common/SectionHeader";
 
 export default function About() {
   const stats = [
     {
-      icon: <HandHeart className="w-6 h-6" />,
-      number: "55+",
-      label: "Women Rehabilitated",
+      icon: <Award className="w-6 h-6" />,
+      number: "2+ years",
+      label: "of Service",
       color: "text-brand-primary",
     },
     {
       icon: <Users className="w-6 h-6" />,
-      number: "7+",
-      label: "Conditions Treated",
+      number: "164",
+      label: "Members Treated",
       color: "text-brand-secondary",
     },
     {
-      icon: <Sparkles className="w-6 h-6" />,
-      number: "1 Year",
-      label: "of Service",
+      icon: <HandHeart className="w-6 h-6" />,
+      number: "97",
+      label: "Addiction Cases",
+      color: "text-brand-primary",
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      number: "67",
+      label: "Psychiatric Cases",
       color: "text-brand-primary",
     },
   ];
 
   return (
     <section className="py-12 sm:py-20 md:py-24 overflow-hidden bg-gradient-to-b from-white to-brand-background">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
-          {/* Image Side */}
-          <div className="relative">
-            <div className="relative rounded-2xl sm:rounded-[2rem] overflow-hidden">
-              <Image
-                src="/images/stocks/swanthana_1.jpg"
-                alt="About Swanthana"
-                width={600}
-                height={700}
-                className="w-full h-[300px] xs:h-[400px] sm:h-[500px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent" />
-            </div>
+      <div className="max-w-6xl mx-auto px-2 sm:px-6">
+        {/* Content Section */}
+        <div className="text-center space-y-8 sm:space-y-12">
+          <SectionHeader
+            badge={{ icon: <Info />, text: "About Us" }}
+            title="Empowering Women through"
+            gradientText="Compassionate Rehabilitation"
+            useGradient={false}
+            description="Swanthana is a women-exclusive de-addiction and counseling center located in Hyderabad. Founded in May 2023 by Ms. Manjula Mummula and Dr. Mamatha Raghuveer Achanta, Swanthana was created to address the alarming gap in women-centered mental health services."
+            alignment="center"
+          />
 
-            {/* Stats Strip */}
-            <div className="absolute -bottom-8 left-2 right-2 sm:-bottom-10 sm:left-10 sm:right-10">
-              <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 grid grid-cols-3 gap-4 sm:gap-8">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className={`${stat.color} mb-2`}>{stat.icon}</div>
-                    <div className="text-lg sm:text-2xl font-bold text-brand-dark mb-1">
-                      {stat.number}
-                    </div>
-                    <div className="text-xs sm:text-sm text-brand-gray">
-                      {stat.label}
-                    </div>
+          {/* Stats Section */}
+          <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-10 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`${stat.color} mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                    {stat.icon}
                   </div>
-                ))}
-              </div>
+                  <div className="text-2xl sm:text-3xl font-bold text-brand-dark mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-sm sm:text-base text-brand-gray">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Content Side */}
-          <div className="space-y-6 sm:space-y-8 lg:mt-20">
-            <SectionHeader
-              badge={{ icon: <Info />, text: "About Us" }}
-              title="Empowering Women through"
-              gradientText="Compassionate Rehabilitation"
-              description="Swanthana is a women-exclusive de-addiction and counseling center located in Hyderabad. Founded in May 2023 by Ms. Manjula Mummula and Dr. Mamatha Raghuveer Achanta, Swanthana was created to address the alarming gap in women-centered mental health services."
-              alignment="left"
-            />
-
-            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-              <div className="bg-white/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-brand-gray-light/20">
-                <h3 className="text-lg sm:text-xl font-semibold text-brand-dark mb-2 sm:mb-3">
-                  Our Approach
-                </h3>
-                <p className="text-brand-gray text-sm sm:text-base">
-                  Personalized care plans, medical checkups, psychiatric
-                  treatment, and daily counseling
-                </p>
-              </div>
-              <div className="bg-white/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-brand-gray-light/20">
-                <h3 className="text-lg sm:text-xl font-semibold text-brand-dark mb-2 sm:mb-3">
-                  Our Commitment
-                </h3>
-                <p className="text-brand-gray text-sm sm:text-base">
-                  Safe recovery, social reintegration, and long-term well-being
-                  for every woman
-                </p>
-              </div>
+          {/* Approach & Commitment Cards */}
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-brand-primary/10 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-brand-dark mb-4 flex items-center gap-3">
+                <div className="w-8 h-8 bg-brand-primary/20 rounded-lg flex items-center justify-center">
+                  <Sparkles className="w-4 h-4 text-brand-primary" />
+                </div>
+                Our Approach
+              </h3>
+              <p className="text-brand-gray text-base sm:text-lg leading-relaxed">
+                Personalized care plans, medical checkups, psychiatric
+                treatment, and daily counseling
+              </p>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-              <button className="btn-primary w-full sm:w-auto">
-                Learn More
-              </button>
-              <button className="btn-border w-full sm:w-auto">
-                Our Facilities
-              </button>
+            <div className="bg-gradient-to-br from-brand-secondary/5 to-brand-primary/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-brand-secondary/10 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-brand-dark mb-4 flex items-center gap-3">
+                <div className="w-8 h-8 bg-brand-secondary/20 rounded-lg flex items-center justify-center">
+                  <HandHeart className="w-4 h-4 text-brand-secondary" />
+                </div>
+                Our Commitment
+              </h3>
+              <p className="text-brand-gray text-base sm:text-lg leading-relaxed">
+                Safe recovery, social reintegration, and long-term well-being
+                for every woman
+              </p>
             </div>
           </div>
+
+          {/* Action Buttons removed as requested */}
         </div>
       </div>
     </section>
